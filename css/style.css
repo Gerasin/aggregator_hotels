@@ -804,7 +804,7 @@ body .button-stl-bl:active {background: #abc4e0;
 .check-month {float: left; width: 60%;}
   .check-month select, .check-date select, body .check-month .xdsoft_pretty, body .check-date .xdsoft_pretty {width: 100%;}
 .search-result .calendar-button {margin-top: 14px;}
-.search-result .calendar {padding: 15px 0 0; margin-top: -18px;}
+.search-result .calendar {padding: 35px 0 0; margin-top: -38px;}
 .xdsoft_selectspinner .xdsoft_chooser {z-index: 50;}
 .sort-box-mob {display: none; padding: 20px 14px;}
   .sort-box-mob table {width: 100%;}
