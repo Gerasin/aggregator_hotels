@@ -1110,12 +1110,12 @@ $(document).ready(function(){
 		if(!$(this).hasClass('active')) {
 			$(this).addClass('active');
 			$('.search-detals').addClass('active');
-			$('.s_d-box').slideDown();
+			$('.s_d-box, .search-btn').slideDown();
 		} else {
 			$(this).removeClass('active');
 			$('.s_d-cont').slideDown();
 			$('.search-detals').removeClass('active');
-			$('.s_d-box').slideUp();
+			$('.s_d-box, .search-btn').slideUp();
 		}
 		return false;
 	});
@@ -1426,6 +1426,15 @@ $(document).ready(function(){
 		$('.search_around-two').hide();
 		return false;
 	});
+
+
+	$('.tooltip-m').tooltip()
+
+	// Удаление результата поиска
+	$('.res-close').click(function(){
+		$(this).parents('.result-detal').remove();
+		return false;
+	})
 
 
 });
@@ -1924,4 +1933,78 @@ $(document).mouseup(function (e){
 
 });
 
+
+
+// autocomplete
+
+$(function() {
+    var projects = [
+      {
+        value: "Point of interest",
+        label: "Point of interest",
+        icon: "ico-itn"
+      },
+      {
+        value: "Airport",
+        label: "Airport",
+        icon: "ico-airport"
+      },
+      {
+        value: "Hotel",
+        label: "Hotel",
+        icon: "ico-hotel"
+      },
+      {
+        value: "City",
+        label: "City",
+        icon: "ico-city"
+      },
+      {
+        value: "Hotel Europa City Vilnius",
+        label: "Hotel Europa City Vilnius",
+        icon: "ico-itn"
+      },
+      {
+        value: "Hotel Europa City Vilnius",
+        label: "Hotel Europa City Vilnius",
+        icon: "ico-dinner"
+      },
+      {
+        value: "Grata Hotel",
+        label: "Grata Hotel",
+        icon: "ico-maps"
+      },
+      {
+        value: "Artis Centrum Hotels",
+        label: "Artis Centrum Hotels",
+        icon: "ico-maps"
+      },
+      {
+        value: "Ramada Hotel & Suites Vi",
+        label: "Ramada Hotel & Suites Vi",
+        icon: "ico-airport"
+      }
+      
+    ];
+ 
+    $( "#project" ).autocomplete({
+      minLength: 0,
+      source: projects,
+      focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        $('.inp-style-ico').removeClass('ico-itn').removeClass('ico-airport').removeClass('ico-hotel').removeClass('ico-city').removeClass('ico-dinner').removeClass('ico-maps');
+        $('.inp-style-ico').addClass(ui.item.icon);
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( '<span class="ico-search ' + item.icon +'"></span>' + item.label )
+        .appendTo( ul );
+    };
+  });
 

@@ -307,7 +307,6 @@
 		<div class="wr">
 			<div class="head-search">
 				<div class="search-rooms">
-					<div class="inp-head"></div>
 					<select name="" class="select">
 						<option value="1">1 room</option>
 						<option value="2">2 room</option>
@@ -317,7 +316,6 @@
 					</select>
 				</div>
 				<div class="search-adults">
-					<div class="inp-head">Adults</div>
 					<div class="adults-box">
 						<div class="adults-ico adults-one"></div>
 						<div class="adults-ico adults-two"><a href="" class="ico-close"></a></div>
@@ -327,7 +325,6 @@
 					<input type="hidden" value="2">
 				</div>
 				<div class="search-children">
-						<div class="inp-head">Children</div>
 						<div class="children-box">
 
 							<div class="children-box-select">
@@ -363,17 +360,15 @@
 					<div class="lnk-reset"><a href="">Reset search</a></div>
 				</div>
 
-				<div class="inp-head"></div>
 				<button class="button-search">Search</button>
 			</div>
 			<div class="head-search-city">
-				<div class="inp-head"></div>
-				<div class="inp-style"><input type="text" value="New York, NY" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" ></div>
+				<div class="inp-style inp-style-i"><div class="inp-style-ico ico-maps"></div><input type="text" value="New York, NY" id="project" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" ></div>
 			</div>
-			<div class="clearfix"></div>
-			<div class="search_around search_around-one">
+			<div class="clearfix"></div> 
+			<!-- del 24 <div class="search_around search_around-one">
 				Search around the city: <a href="" class="search_a-open" data-toggle="modal" data-target=".cities-around-sm">0 km</a>
-			</div>
+			</div> -->
 			<div class="search_around search_around-two">
 				Cities around required city: <span>No cities around 10 km</span> <a href="" class="ico-close"></a>
 			</div>
@@ -381,18 +376,13 @@
 				<a href="" class="calendar-prev"><!-- May 2015 --></a>
 				<a href="" class="calendar-next"><!-- July 2015 --></a>
 			</div>
-			<div class="total">
-				<div class="h3">Total: <span>0</span> night<em>s</em></div>
-			</div>
-			<div class="date-head">
-				<div class="date-header">
-					<div class="date-header-cont">
-						<span class="check-in"><i>Choose</i> Check-in date<em>:</em> <span>20th April</span><a href="" class="ico-close"></a></span>
-						<span class="check-out"><i>Choose</i> Check-out date<em>:</em> <span>20th April</span><a href="" class="ico-close"></a></span>
-					</div>
-					<div class="date-today">4 June</div>
+			<div class="total total-center">
+				<div class="checkbox-span date-header">
+					<label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label>
 				</div>
+				<div class="total-span h3">Total: <span>0</span> night<em>s</em> <div class="check-out check-ok"><a href="" class="ico-close"></a></div></div>
 			</div>
+
 		</div>
 		<div class="calendar">
 			<div class="day-tooltip-box"><div class="day-tooltip"><span>Choose Check-out date</span></div></div>
@@ -1168,13 +1158,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wr">
-			<div class="date-head">
-				<div class="date-header">
-					<p><label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label></p>
-				</div>
-			</div>
-		</div>
+
 	</div>
 
 	<div class="search-detals">
@@ -1221,7 +1205,7 @@
 								<div class="range-date"><input type="text"></div>
 							</div>
 						</div>
-						<a href="" class="btn-filter" data-toggle="modal" data-target=".quick-filters-sm">Use quick filters</a>
+						
 					</div>
 				</div>
 			</div>
@@ -1397,6 +1381,12 @@
 					</div>
 				</div>
 			</div>
+			<div class="clearfix"></div>
+			<div class="search-btn">
+				<a href="" class="button-stl">Submit</a>
+				<a href="" class="button-stl-bl">Use quick filters</a>
+				<div class="search-reset"><img src="img/ico-reset.png" alt=""><a href="">Reset filter</a></div>
+			</div>
 		</div>
 		<div class="s_d-open"></div>
 	</div>
@@ -1485,6 +1475,13 @@
 			</ul>
 		</div>
 	</div>
+
+	<div class="result-detals">
+		<div class="result-detal"><a href="" class="res-close"></a>New York City</div>
+		<div class="result-detal"><a href="" class="res-close"></a>Price: $190 − $500</div>
+		<div class="result-detal"><a href="" class="res-close"></a>Rating: >3,5</div>
+	</div>
+
 	<div class="sort-box-mob">
 		<table>
 			<tr>
@@ -1527,7 +1524,11 @@
 				<div class="cat-img-big"><img src="" alt=""></div>
 				<div class="cat-cont">
 					<div class="cat-cont-main">
-						<h3><a href="">Holiday Inn Paris Saint Germain des Prés</a> 4*</h3>
+						<h3><a href="">Holiday Inn Paris Saint Germain des Prés</a> 4* 
+							<a href="" class="nav-ico nav-ico-r tooltip-m" rel="tooltip" title="message"></a> 
+							<a href="" class="nav-ico nav-ico-fav tooltip-m" rel="tooltip" title="message"></a> 
+							<a href="" class="nav-ico nav-ico-close tooltip-m" rel="tooltip" title="message"></a>
+						</h3>
 						<div class="cat-cont-rayt">
 							<span>
 								<img src="img/ico-s.png" alt=""> 8.4 / 483 <em>reviews</em>
@@ -1649,7 +1650,10 @@
 				<div class="cat-img-big"><img src="" alt=""></div>
 				<div class="cat-cont">
 					<div class="cat-cont-main">
-						<h3><a href="">Holiday Inn Paris Saint Germain des Prés</a> 4*</h3>
+						<h3><a href="">Holiday Inn Paris Saint Germain des Prés</a> 4* 
+						<a href="" class="nav-ico nav-ico-r active tooltip-m" rel="tooltip" title="message"></a> 
+						<a href="" class="nav-ico nav-ico-fav active tooltip-m" rel="tooltip" title="message"></a> 
+						<a href="" class="nav-ico nav-ico-close active tooltip-m" rel="tooltip" title="message"></a></h3>
 						<div class="cat-cont-rayt">
 							<span>
 								<img src="img/ico-s.png" alt=""> 8.4 / 483 <em>reviews</em>
@@ -1701,13 +1705,13 @@
 						<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
 						<div class="hotel-serv">
 							<ul class="hotel-serv-in">
-								<li><img src="img/ico-br.png" alt=""> $10</li>
-								<li><img src="img/ico-wifi.png" alt=""> $3</li>
-								<li><img src="img/ico-park.png" alt=""> $15</li>
+								<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 990 Р</li>
+								<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> 1500 Р</li>
+								<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> 50 000 Р</li>
 							</ul>
 						</div>
 						<div class="pay-total">
-							<div class="pay-total-in">For 37 days: <strong>$3145</strong></div>
+							<div class="pay-total-in">For 37 days: <strong>950 750 145 Р</strong></div>
 						</div>
 					</div>
 					<div class="clearfix"></div>
