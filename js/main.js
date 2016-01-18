@@ -1434,10 +1434,270 @@ $(document).ready(function(){
 	$('.res-close').click(function(){
 		$(this).parents('.result-detal').remove();
 		return false;
-	})
+	});
+
+
+	// Галлерея на страничке отеля
+	$('.hotel-gal-top').slick({
+	  	slidesToShow: 1,
+	  	slidesToScroll: 1,
+	  	arrows: false,
+	  	asNavFor: '.hotel-gal-bot'
+	});
+	$('.hotel-gal-bot').slick({
+	  	slidesToShow: 7,
+	  	slidesToScroll: 1,
+	  	asNavFor: '.hotel-gal-top',
+	  	dots: false,
+	  	centerMode: false,
+	  	focusOnSelect: true,
+	  	responsive: [
+	    {
+	      breakpoint: 1000,
+	      settings: {
+	        slidesToShow: 5
+	      }
+	    },
+	    {
+	      breakpoint: 765,
+	      settings: {
+	        slidesToShow: 3
+	      }
+	    }
+	    ]
+	});
+
+
+	$('.page-text-open .read-open').click(function(){
+		$('.page-hide').css({'height' : '100%'});
+		$(this).hide();
+		$('.read-hide').show();
+		return false;
+	});
+	$('.page-text-open .read-hide').click(function(){
+		$('.page-hide').css({'height' : 123 + 'px'});
+		$(this).hide();
+		$('.read-open').show();
+		return false;
+	});
+
+
+	$('.reviews-tab button').click(function(){
+		var tabIndex = $(this).attr('rel');
+		$(this).parents('ul').find('li').removeClass('active');
+		$(this).parents('li').addClass('active');
+		$('.reviews-items .reviews-item').hide();
+		$(tabIndex).show();
+		return false;
+	});
+	$('.reviews-items .reviews-item:not(:first)').hide();
+	
+	$('.reviews-item').each(function(){
+		$(this).find('.review-paging:not(:first)').hide();
+	});
+
+
+	$('.reviews-item').each(function(){
+		var itemNamber = '';
+		var lengthItem = $(this).find('.review-paging').length;
+		if(lengthItem < 5) {
+			$(this).find('.review-paging').each(function(){
+				itenIndex = $(this).index() + 1;
+				itemNamber = itemNamber + '<li class="pag_' +itenIndex+ '"><a href="' + itenIndex + '">' + itenIndex + '</a></li>'
+			});
+			$(this).find('.listing-page').find('.li:first').addClass('active');
+		} else {
+			for (var i = 1; i < 5; i++) {
+			   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+			};
+			itemNamber = itemNamber + '<li><span> ... </span></li>';
+			itemNamber = itemNamber + '<li class="pag_' +lengthItem+ '"><a href="'+ lengthItem +'">' + lengthItem + '</a></li>';
+		};
+		var itemHTML = "<ul>" + itemNamber + "</ul>";
+		$(this).find('.listing-page').html(itemHTML);
+		$(this).find('.listing-page').find('li:first').addClass('active');
+	});
+
+	var pagination = function() {
+		var itemBox = $(this).parents('.reviews-item');
+		$(this).parents('.reviews-item').find('.review-paging').hide();
+		var indexClick = $(this).attr('href');
+		indexClickopen = --indexClick;
+		$(this).parents('.reviews-item').find('.review-paging').eq(indexClickopen).show();
+		console.log(indexClickopen);
+		var lengthItemClick = $(this).parents('.reviews-item').find('.review-paging').length;
+		var itemNamber = '';
+		var minClick = lengthItemClick - 3;
+		if(lengthItemClick > 4) {
+			if(indexClick < minClick && indexClick >= 1 && indexClick > 1) {
+				itemNamber = itemNamber + '<li class="pag_' +1+ '"><a href="1"'+ 1 +'">' + 1 + '</a></li>';
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				var indexClickStop = indexClick + 3
+				for (var i = indexClick; i < indexClickStop; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				itemNamber = itemNamber + '<li class="pag_' +lengthItemClick+ '"><a href="'+ lengthItemClick +'">' + lengthItemClick + '</a></li>';
+			};
+			if (indexClick <= 1) {
+				for (var i = 1; i < 5; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				itemNamber = itemNamber + '<li class="pag_' +lengthItemClick+ '"><a href="'+ lengthItemClick +'">' + lengthItemClick + '</a></li>';
+			}
+			var ClickMin = +lengthItemClick - 3;
+			if (++indexClick > ClickMin) {
+				itemNamber = itemNamber + '<li class="pag_' +1+ '"><a href="'+ 1 +'">' + 1 + '</a></li>';
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				var itemMax = ++lengthItemClick
+				for (var i = lengthItemClick - 4; i < itemMax; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+			}
+			var itemHTML = "<ul>" + itemNamber + "</ul>";
+			$(this).parents('.reviews-item').find('.listing-page').html(itemHTML);
+			var indexActive = ++indexClickopen;
+			indexActive = 'li.pag_' + indexActive;
+			itemBox.find('.listing-page').find(indexActive).addClass('active');
+		} else {
+			console.log('da');
+			itemBox.find('.listing-page').find('li').removeClass('active');
+			$(this).parents('li').addClass('active');
+		}
+
+		
+		
+
+		$('.listing-page a').unbind('click', pagination);
+    	$('.listing-page a').bind('click', pagination);
+		return false;
+	};
+
+	$('.listing-page a').bind('click', pagination);
+
+
+	
 
 
 });
+
+$(function() {
+// Календарь
+	var calendar = $('#datepicker');
+    
+    var datepickerRange = {
+        startDate:null, 
+        endDate:null, 
+        currentDate:new Date(), 
+        selectCount:0,
+    
+        checkDays: function(datepicker){
+            var self = this;
+            
+            if(this.startDate && this.endDate){
+                setTimeout(function() {
+                    //обрабатываем для каждого месяца
+                    datepicker.dpDiv.find('.ui-datepicker-calendar').each(function(monthIndex){
+                        var calendar = $(this);
+                        var currMonth = datepicker.drawMonth+monthIndex;  //Берем начальный месяц отрисовки, к нему прибавлям текущий месяц итерации (месяцы zero-based)
+                        var currYear = datepicker.drawYear;
+                            
+                        //Обработка стыка годов
+                        if (currMonth > 11) {
+                            currYear++;
+                            currMonth = datepicker.drawMonth - 12 + monthIndex; //magic ))
+                        }   
+                             
+                        calendar.find('td>a.ui-state-default, td>span.ui-state-default').each(function (dayIndex) {  
+                            var day = dayIndex+1; //index is zero-based but days isn't
+                            self.checkDay(this, day, currMonth, currYear);
+                        });
+                            
+                    })
+
+                   
+                }, 1);
+            }
+        },
+    	
+        checkDay: function(elem, day, month, year, leng){
+            var date = new Date(year, month, day);
+            
+            if(date.getTime()>=this.startDate.getTime()&& date.getTime()<=this.endDate.getTime()){
+            	if(date.getTime()==this.startDate.getTime()) {
+            		$(elem).addClass('ui-state-first').removeClass('ui-state-highlight');
+            		$(elem).parent('td').addClass('ui-state-first-in');  
+            	}
+            	if(date.getTime()==this.endDate.getTime()) {
+            		$(elem).addClass('ui-state-last').removeClass('ui-state-highlight');
+            	} else {
+                	$(elem).addClass('ui-state-act').removeClass('ui-state-highlight'); 
+                	$(elem).parent('td').addClass('ui-state-act-in');    
+                };
+            }
+
+        },
+    
+        getSelectedDate: function(inst){
+            return new Date(inst.selectedYear, inst.selectedMonth, inst.selectedDay);
+        }
+    };
+
+    calendar.datepicker({
+        numberOfMonths: 2,
+        firstDay : "7",
+        dateFormat: 'dd.mm.yy',
+        minDate: new Date(),
+        "onSelect": function (dateText, inst) {
+            
+            datepickerRange.selectCount++;
+            datepickerRange.currentDate = datepickerRange.getSelectedDate(inst);
+            
+            if(datepickerRange.selectCount<2){
+                datepickerRange.startDate = datepickerRange.getSelectedDate(inst);
+                datepickerRange.endDate = null;
+                $("#dateText").html(dateText);
+                console.log(datepickerRange.startDate);
+                var d = datepickerRange.startDate;
+                var dateNew = new Date();
+				var newDateMin = new Date(d.valueOf()-24*60*60*1000*20);
+				if(dateNew > newDateMin) { newDateMin = dateNew };
+				var newDateMax = new Date(d.valueOf()+24*60*60*1000*20);
+                $('#datepicker').datepicker( "option", "minDate", newDateMin );
+                $('#datepicker').datepicker( "option", "maxDate", newDateMax );
+                
+                $('.rates-h3').removeClass('default');
+                $('.rates-h3').addClass('active');
+            }else{
+                datepickerRange.selectCount = 0;
+                datepickerRange.endDate = datepickerRange.getSelectedDate(inst);
+                if(datepickerRange.startDate.getTime()>datepickerRange.endDate.getTime()){
+                    datepickerRange.endDate = datepickerRange.startDate;
+                    datepickerRange.startDate = datepickerRange.currentDate;    
+                    $("#dateText").prepend(dateText+' - ');
+                }else{
+                    $("#dateText").append(' - '+dateText);
+                }
+                datepickerRange.checkDays(inst);
+                var d = new Date();
+				var newDateMin = new Date();
+				var newDateMax = new Date(d.valueOf()+24*60*60*1000*200);
+                $('#datepicker').datepicker( "option", "minDate", newDateMin );
+                $('#datepicker').datepicker( "option", "maxDate", newDateMax );
+                $('.rates-h3').addClass('default');
+            }
+            return false;
+        },
+        onChangeMonthYear: function(year, month, inst) {
+            datepickerRange.currentDate = datepickerRange.getSelectedDate(inst);
+            datepickerRange.checkDays(inst);
+        }
+    });
+	$('.ui-state-active').removeClass('ui-state-active');
+
+})
+
 
 // Блокирует передачу события к родителю
 function stopBubble(oEvent) {

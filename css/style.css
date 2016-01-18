@@ -93,10 +93,10 @@ body button, body input {outline:  none;}
       }
       .adults-ico:before {position: absolute; content: ' '; top: 4px; left: 14px; content: ' '; background: url(../img/sprite.png) -47px -28px no-repeat; width: 12px; height: 33px;}
       .adults-ico:after {position: absolute; content: ' '; top: 100%; height: 12px; background: url(../img/shadow_ico.png) 0 0 no-repeat; background-size: 100% 100%; left: -1px; right: -1px;}
-      .ico-close {display: block; position: absolute; top: -5px; right: -5px; width: 12px; height: 12px; background: url(../img/sprite.png) 0 -14px no-repeat;}
+      .ico-close {display: block; position: absolute; top: -5px; right: -5px; width: 12px; height: 12px; background: url(../img/sprite.png) 0 -14px no-repeat; border: 0; padding: 0; outline: none;}
     .adults-big {width: auto; padding-left: 34px; padding-right: 12px;}
     .adults-big {display: none;}
-  .adults-add {display: block; float: left; width: 25px; height: 25px; background: url(../img/sprite.png) -47px 0 no-repeat; margin: 8px 0 0;}
+  .adults-add {display: block; float: left; width: 25px; height: 25px; background: url(../img/sprite.png) -47px 0 no-repeat; margin: 8px 0 0; border: 0; padding: 0; outline: none;}
 .search-children {float: left; width: 210px; margin-right: -70px;}
   .search-children .xdsoft_spinner {display: none !important;}
   .search-children .xdsoft_selectspinner:before {position: absolute; top: 17px; right: 6px; content: ' '; opacity: 0.7;
@@ -110,7 +110,7 @@ body button, body input {outline:  none;}
       border-bottom: 5px solid #272525;}
   .search-children:hover:before {opacity: 1;}
   .children-box {float: left; padding-top: 1px;}
-  .children-add {display: block; float: left; width: 25px; height: 25px; background: url(../img/sprite.png) -47px 0 no-repeat; margin: 8px 0 0;}
+  .children-add {display: block; float: left; width: 25px; height: 25px; background: url(../img/sprite.png) -47px 0 no-repeat; margin: 8px 0 0; border: 0; padding: 0; outline: none;}
   .children-ico {float: left; min-width: 30px; padding-left: 5px; padding-right: 5px; height: 40px; line-height: 40px; font-size: 11px; line-height: 15px; text-align: center; color: #272525; text-shadow: 0 1px rgba(244,255,154,.34); background: url(../img/ico_bg.png) 0 0 repeat-x; position: relative; margin: 0 12px 0 0;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -360,7 +360,7 @@ body .ui-slider-horizontal .ui-slider-range {background: url(../img/sl-bg.gif) 0
 .slick-loading .slick-track{visibility: hidden;}
 .slick-slide{display: none; float: left; height: 100%; min-height: 1px;}
 [dir='rtl'] .slick-slide{float: right;}
-.slick-slide img{display: block;}
+.slick-slide img{display: block; width: 100%;}
 .slick-slide.slick-loading img{display: none;}
 .slick-slide.dragging img{pointer-events: none;}
 .slick-initialized .slick-slide{display: block;}
@@ -416,7 +416,7 @@ body .ui-slider-horizontal .ui-slider-range {background: url(../img/sl-bg.gif) 0
   .inp-style input {background: #fff url(../img/inp-map.png) 8px center no-repeat; padding-left: 30px;}
 .search-result .search-rooms .select {width: 100px;}
 .search-result .head-search {width: 745px;}
-.search-result.head {padding-top: 16px; min-height: 94px;}
+.search-result.head {padding-top: 8px; min-height: 94px;}
 .search-result .search-children {float: left;}
 .total_nights {float: left; width: 133px; color: #fff; height: 18px; line-height: 41px; display: none;}
   .total_nights .ico-close {position: relative; display: inline-block; top: auto; right: auto; margin: 2px 0 -2px 4px;}
@@ -804,7 +804,7 @@ body .button-stl-bl:active {background: #abc4e0;
 .check-month {float: left; width: 60%;}
   .check-month select, .check-date select, body .check-month .xdsoft_pretty, body .check-date .xdsoft_pretty {width: 100%;}
 .search-result .calendar-button {margin-top: 14px;}
-.search-result .calendar {padding: 15px 0 0; margin-top: -18px;}
+.search-result .calendar {padding: 33px 0 0; margin-top: -31px;}
 .xdsoft_selectspinner .xdsoft_chooser {z-index: 50;}
 .sort-box-mob {display: none; padding: 20px 14px;}
   .sort-box-mob table {width: 100%;}
@@ -1003,9 +1003,257 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
 .total-center {text-align: center;}
 .total-span .ico-close {top: 2px; right: -19px;}
 
-/* ico-search */
+.back-list {padding: 10px 0 4px; font-size: 14px; color: #6d8d15;}
+  .back-list a {color: #6d8d15;}
+
+.hotel-info {
+    padding: 12px 0 0;
+}
+  .hotel-info h2 {font-weight: normal; font-size: 36px; line-height: 40px;margin: 0 0 17px; padding: 0;}
+  .hot-bal {display: inline-block; vertical-align: top; padding: 0 30px 0 28px; position: relative;}
+    .hot-bal-ico {position: absolute; vertical-align: top;top: 3px; left: 0;}
+    .hot-bal p {margin: 0; font-size: 14px;}
+      .hot-bal p span {font-size: 24px;}
+    .hot-bal a {font-size: 11px;}
+  .hot-from {display: inline-block; vertical-align: top; padding: 0 20px 0 0; position: relative;}
+    .hot-from span {font-size: 24px;}
+  .hot-night {display: inline-block; vertical-align: top; padding: 10px 20px 0 0; position: relative; white-space: nowrap;}
+  .hotel-info .pay-button {display: inline-block; width: 99px; vertical-align: top;padding-top: 4px;}
+  .hotel-info .cat-cont-rayt {border-top: 1px solid #e4e4e4;margin: 9px 0 27px;padding: 14px 0 0; font-size: 14px;}
+    .hotel-info .cat-cont-rayt i {font-size: 24px; font-weight: normal; font-style: normal;}
+    .cat-cont-rayt .ico-vk {margin-top: -9px;}
+  .hot-service {float: left; width: 155px; font-size: 12px;}
+    .hot-service span {display: inline-block; width: 55px;}
+    .hot-serv-ln {width: 65px; height: 4px; display: inline-block; position: relative; background: #e7eaec; margin: 0 8px 0 0;}
+      .hot-serv-ln em {display: block; height: 4px; background: #9abd27;}
+    .hot-service i {font-style: normal; display: inline-block;}
+    .hot-serv-box {padding: 0 0 12px;}
+  .hot-km {float: right; position: relative; width: 205px;padding: 0 65px 0px 0;margin-bottom: 0px;}
+    .pay-item i {background: #fff; font-style: normal;}
+    .hot-km .table-pay {padding: 0; margin: 0;}
+    .pay-item {margin: 0;padding: 0 0 12px;}
+    .hot-km-lnk {position: absolute; left: 215px; top: 0; font-size: 12px;}
+  .top_options {padding: 0 0 40px;}
+    .top_options h3 {font-size: 18px; font-weight: normal;margin: 0 0 7px;line-height: 35px;}
+    .top_options ul {padding: 0; margin: 0;}
+      .top_options ul li {
+        list-style: none;
+        display: inline-block;
+        width: 49%;
+        padding: 0 0 6px 24px;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+        .top_options ul li img {position: absolute; left: 0; top: 1px; vertical-align: top;}
+        .top_options ul li span {color: #aaa;}
+  .reviews {padding: 0 0 30px;}
+    .reviews h3 {font-size: 24px; font-weight: normal;margin: 0 0 4px;}
+    .reviews .pay-button {float: right; width: 95px;margin: 2px 0 0;}
+      .reviews .pay-button a, .reviews .pay-button button {font-size: 14px; margin: 0;}
+  .reviews-tab {padding: 0;margin: 0 0 16px; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4; height: 25px;}
+    .reviews-tab li {list-style: none; display: block; float: left; padding: 0 11px; height: 25px; line-height: 25px; position: relative; font-size: 12px;}
+      .reviews-tab li button {color: #6d8d15; border-bottom: 1px dashed #99ad6d; text-decoration: none; padding: 0; outline: none; border: 0; background: none; font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;}
+      .reviews-tab li button:hover {border-color: transparent;}
+      .reviews-tab li img {margin-right: 6px;}
+      .reviews-tab li.active {background: #e7eaec;}
+        .reviews-tab li.active a {border: 0; color: #272525; cursor: default;}
+        .reviews-tab li.active:before {position: absolute; top: 25px; left: 0; right: 0; content: ' '; height: 7px; background: url(../img/tab-marker.png) center 0 no-repeat;}
+  .reviews-box {padding: 0 0 12px;}
+    .reviews-bal {padding: 0 0 8px; color: #6d8d15; font-size: 18px;}
+      .reviews-bal span {font-size: 24px;padding-left: 5px;padding-right: 2px;}
+    .reviews-header {padding: 0 0 13px; font-size: 18px;}
+    .reviews-date {color: #aaa; padding: 0 0 10px;}
+    .reviews-box p {font-size: 14px; line-height: 20px; margin: 0;}
+  .reviews-listing {position: relative; text-align: center; margin: 20px 0 40px;}
+    .reviews-listing:before {content: ' '; position: absolute; top: 12px; left: 0; right: 0; border-top: 1px solid #e4e4e4;}
+    .reviews-listing-bg {position: relative; display: inline-block; background: #fff; padding: 0 20px;}
+      .reviews-listing a {display: inline-block; width: 24px; height: 24px; line-height: 24px; text-decoration: underline; color: #6d8d15;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;}
+      .reviews-listing a:hover {text-decoration: none;}
+      .reviews-listing span {color: #6d8d15;}
+      .reviews-listing a.active {cursor: default; color: #9abd27; color: #fff; text-decoration: none; background: #9abd27;}
+
+  .listing-page {position: relative; text-align: center; margin: 20px 0 40px;}
+    .listing-page:before {content: ' '; position: absolute; top: 12px; left: 0; right: 0; border-top: 1px solid #e4e4e4;}
+    .listing-page ul {position: relative; display: inline-block; background: #fff; padding: 0 20px; margin: 0;}
+      .listing-page ul li {list-style: none; display: inline-block;}
+        .listing-page a {display: inline-block; padding-left: 8px; padding-right: 8px; height: 24px; line-height: 24px; text-decoration: underline; color: #6d8d15;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;}
+        .listing-page li span {display: inline-block; height: 24px; line-height: 24px; padding-left: 8px; padding-right: 8px;}
+        .listing-page li.active a {color: #9abd27; color: #fff; background: #9abd27; text-decoration: none; cursor: default;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;}
 
 
+  .h2 {font-size: 24px; border-bottom: 1px solid #e4e4e4;margin: 0 0 12px;padding: 0 0 11px;}
+  .amenities {padding: 0 0 20px; margin: 0;}
+    .amenities li {
+      display: inline-block;
+      width: 49%;
+      padding: 0 0 2px 12px;
+      position: relative;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+      .amenities li:before {
+        position: absolute;
+        content: ' ';
+        top: 8px;
+        left: 2px;
+        width: 4px;
+        height: 4px;
+        background-color: #aaa;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        }
+  .hotel-gallery {padding: 0 0 30px;}
+    .hotel-gal-top {padding: 0; margin: 0 0 1px; position: relative;}
+    .hotel-gal-bot {padding: 0; margin: 0; position: relative;}
+      .hotel-gal-bot li {float: left; list-style: none; height: 55px; margin: 0 1px 0 0;}
+        .hotel-gal-bot li img {height: 100%; vertical-align: top;}
+  .hotel-gal-bot button {position: absolute; top: -206px; width: 36px; height: 48px; display: block; border: 0; font-size: 0; outline: none;}
+
+  .hotel-gal-bot .slick-prev {left: -11px; background: url(../img/sprite.png) -80px 0 no-repeat;}
+  .hotel-gal-bot .slick-prev:hover {background-position: -80px -89px;}
+  .hotel-gal-bot .slick-next {right: -11px; background: url(../img/sprite.png) -124px 0 no-repeat;}
+  .hotel-gal-bot .slick-next:hover {background-position: -124px -89px;}
+
+  .rates {padding: 0 0 15px;margin: 0px 0 6px; position: relative;}
+    .rates .h2 {border: 0; margin: 0;}
+    .rates-search {
+      background: #eaf4ff;
+      padding: 8px 40px 20px;
+      text-align: center;
+      -webkit-box-shadow: 0 1px 2px #b4c9dd;
+      -moz-box-shadow: 0 1px 2px #b4c9dd;
+      box-shadow: 0 1px 2px #b4c9dd;
+      }
+        .rates-h3 {display: inline-block; padding: 0 10px; background: #eaf4ff; font-size: 18px; bottom: -12px; position: relative; z-index: 10;}
+        .rates-h3 .ch-out {display: none;}
+        .rates-h3.active .ch-in {display: none;}
+        .rates-h3.active .ch-out {display: block;}
+        .rates-h3.default {opacity: 0;}
+        .rates .ui-datepicker-inline {width: auto !important; background: none !important; border: 0 !important;}
+        .rates .ui-datepicker-header {
+          background: none !important;
+          border: 0;
+          border-top: 1px solid #cddeee;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-bottom: 14px;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          }
+        .rates #datepicker {position: relative;}
+        .rates #datepicker:before {position: absolute; content: ' '; top: 2px; left: 0; right: 0; border-top: 1px solid #cddeee; display: block;}
+        .rates #datepicker:after {position: absolute; content: ' '; top: 33px; left: 0; right: 0; border-top: 1px solid #cddeee; display: block;}
+        .rates .ui-datepicker .ui-datepicker-next {background: url(../img/next.png) center center no-repeat; cursor: pointer; margin: 2px -17px 0 0;}
+        .rates .ui-datepicker .ui-datepicker-prev {background: url(../img/prew.png) center center no-repeat; cursor: pointer; margin: 2px 0 0 -17px;}
+        .rates .ui-datepicker .ui-datepicker-next span, .rates .ui-datepicker .ui-datepicker-prev span {display: none;}
+        .rates .ui-datepicker th {font-size: 14px; font-family: 'Trebuchet MS'; font-weight: normal; width: 24px;padding: 0px 0 9px; color: #272525;}
+        .rates .ui-datepicker th.ui-datepicker-week-end {color: #f44d4d;}
+        .rates .ui-datepicker td {width: 24px;padding: 0 0 6px;}
+        .rates .ui-datepicker-calendar td a {text-align: center; background: none; border: 0; height: 24px; width: 24px; margin: 0 auto; line-height: 24px; font-size: 14px; font-family: 'Trebuchet MS'; font-weight: normal; color: #272525;padding: 0;}
+        .rates .ui-datepicker-calendar td span {text-align: center; background: none; border: 0; height: 24px; width: 24px; margin: 0 auto; line-height: 24px; font-size: 14px; font-family: 'Trebuchet MS'; font-weight: normal; color: #8fabc5;padding: 0;}
+        .rates .ui-datepicker-calendar td a.ui-state-default.ui-state-highlight {}
+        .rates .ui-datepicker-group.ui-datepicker-group-first {width: 265px; float: left;}
+        .rates .ui-datepicker-group.ui-datepicker-group-last {width: 265px; float: right;}
+        .rates .ui-datepicker-calendar td a.ui-state-act {color: #000; position: relative; z-index: 2;}
+        .rates .ui-datepicker-calendar td.ui-state-act-in {position: relative;}
+        .rates .ui-datepicker-calendar td.ui-state-act-in:after {position: absolute; content: ''; width: 46px; left: -5px; top: 1px; height: 24px; background: #ffffcc; z-index: 1;}
+        .rates .ui-datepicker-calendar td.ui-state-first-in:after {display: none;}
+        .rates .ui-datepicker-calendar td a.ui-state-active, .rates .ui-datepicker-calendar td a.ui-state-first, .rates .ui-datepicker-calendar td a.ui-state-last {color: #000; margin: 0 auto !important; width: 24px !important;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #000;
+          -webkit-box-shadow: 0 1px 2px #73892d;
+          -moz-box-shadow: 0 1px 2px #73892d;
+          box-shadow: 0 1px 2px #73892d;
+          background-image: -webkit-linear-gradient(bottom, #bada56, #d9eb74);
+          background-image: -moz-linear-gradient(bottom, #bada56, #d9eb74);
+          background-image: -o-linear-gradient(bottom, #bada56, #d9eb74);
+          background-image: -ms-linear-gradient(bottom, #bada56, #d9eb74);
+          background-image: linear-gradient(to top, #bada56, #d9eb74);
+          z-index: 10}
+  #dateText {display: none;}
+  .rates-detals {border-top: 1px solid #cddeee; padding: 14px 0 0; text-align: left;}
+    .rates-search .inp-head {text-align: left; color: #272525;}
+
+    .rates .adults-ico {line-height: 30px;}
+    .rates .children-ico {height: 30px; width: auto; min-width: 17px;}
+    .rates .select-ok {margin-top: 5px;}
+    .rates .select-close {margin-top: 8px;}
+    .rates .children-ico span {font-size: 14px; line-height: 15px;}
+    body .rates  .xdsoft_pretty {height: 30px; line-height: 30px;}
+  .rates .adults-ico, .rates .children-ico {height: 30px; width: 30px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px rgba(59,59,59,.21), inset 0 1px #fff, inset 0 0 7px #fff;
+    -moz-box-shadow: 0 1px 2px rgba(59,59,59,.21), inset 0 1px #fff, inset 0 0 7px #fff;
+    box-shadow: 0 1px 2px rgba(59,59,59,.21), inset 0 1px #fff, inset 0 0 7px #fff;
+    background-image: -webkit-linear-gradient(bottom, #e3f1ff, #fff);
+    background-image: -moz-linear-gradient(bottom, #e3f1ff, #fff);
+    background-image: -o-linear-gradient(bottom, #e3f1ff, #fff);
+    background-image: -ms-linear-gradient(bottom, #e3f1ff, #fff);
+    background-image: linear-gradient(to top, #e3f1ff, #fff);}
+    .rates .adults-ico:after, .rates .children-ico:after {display: none;}
+    .rates .adults-ico:before {background: url(../img/ico-man.png) 0 0 no-repeat; width: 9px; height: 25px;}
+  .rates .children-ico span {font-size: 14px; line-height: 14px; color: #9abd27;}
+   .rates .adults-ico:before {top: 3px; left: 9px;} 
+   .rates .adults-ico.adults-big {padding-left: 20px; font-size: 14px; width: auto;}
+   .rates .adults-add, .rates .children-add {margin-top: 4px;}
+   .rates .total_nights-main {margin-top: 13px; font-size: 18px;}
+   .rates .total_nights-main em {font-style: normal;}
+   .rates .total_nights-main .ico-close {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+   }
+   .rates .adults-add, .rates .children-add {background-position: -47px -65px;}
+   .rates .xdsoft_selectspinner:before {top: 12px;}
+    
+
+
+   .search-check {float: left; font-size: 12px; padding: 28px 15px 0 0;}
+   .search-check.last {padding-right: 0;}
+    .search-check label {display: inline-block; padding-left: 5px;}
+    a.dotted {text-decoration: none; border-bottom: 1px dotted #92aa6d;}
+    a.dotted:hover {border-color: transparent;}
+    .rates .search-adults {padding-left: 0;}
+    .rates .search-children {margin: 0 25px 0 0; width: auto;}
+    .search-check-cont {float: left; width: 300px; margin-right: -30px;}
+    .rates .pay-button {width: 173px; margin: 0 auto; float: none;padding: 18px 0 0;}
+      .rates .pay-button a, .rates .pay-button button {font-size: 18px; height: 32px; line-height: 30px; margin: 0; font-weight: normal;}
+    .rates .search-adults {width: 135px;}
+    .rates .children-box-select {padding-right: 30px;}
+.page-text {padding: 0 0 38px;}
+  .page-text p {margin: 0 0 20px; line-height: 20px; font-size: 14px;} 
+  .page-text-open {font-size: 12px; margin: 4px 0 0;}
+    .read-hide {display: none; top: -30px; position: relative;}
+    .page-text-open button {border: 0; background: 0; outline: none; color: #6d8d15; text-decoration: underline; font: 12px 'Trebuchet MS', Helvetica, sans-serif; padding: 0; cursor: pointer;}
+    .page-text-open button:hover {text-decoration: none;}
+  .page-hide {overflow: hidden; height: 123px; position: relative;}
+    .page-hide:before {position: absolute; content: ' '; bottom: 0; left: 0; right: 0; height: 1px;
+      -webkit-box-shadow: 0 0 9px 7px rgba(255, 255, 255, 1.0);
+      -moz-box-shadow:    0 0 9px 7px rgba(255, 255, 255, 1.0);
+      box-shadow:         0 0 9px 7px rgba(255, 255, 255, 1.0);}
+.rates .ui-datepicker .ui-datepicker-next, .rates .ui-datepicker .ui-datepicker-prev {border-color: transparent !important;}
+ 
+ body .btn-lnk {background: none; border: none; padding: 0; vertical-align: top; display: inline-block; font: 12px 'Trebuchet MS', Helvetica, sans-serif; color: #6d8d15; text-decoration: underline;}
+ body .btn-lnk:hover {text-decoration: none;}
 
 
 @media screen and (min-width: 1200px) {
@@ -1026,6 +1274,13 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
     -moz-border-radius: 6px;
     border-radius: 6px;
   }
+  .hotel-info .pay-button {padding-top: 15px;}
+  .hot-km {float: none;}
+  .hot-service {float: none;}
+  .reviews .pay-button {padding-top: 0;}
+  .rates .ui-datepicker-group.ui-datepicker-group-last, .rates .ui-datepicker-group.ui-datepicker-group-first {width: 220px;}
+  .rates-h3  {bottom: -5px;}
+  .rates .ui-datepicker-calendar td a.ui-state-act {width: 32px; margin: 0px -1px;}
 
 }
 @media screen and (max-width: 1000px) {
@@ -1114,6 +1369,13 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .total_nights .lnk-reset {display: none;} 
   .search-result .date-header label {margin: 0 0 0 50px;}
   .total-center {margin-top: -5px;} 
+  .hotel-info .pay-button {padding-top: 2px}
+  .top_options ul li {float: none; width: auto; display: block;}
+  .reviews-tab li {padding: 0 4px;}
+  .rates-search {padding-left: 10px; padding-right: 10px;}
+  .rates .ui-datepicker-group.ui-datepicker-group-last, .rates .ui-datepicker-group.ui-datepicker-group-first {width: 198px;}
+  .rates .ui-datepicker-calendar td a.ui-state-act {width: 28px; margin: 0 -2px;}
+
 
 }
 
@@ -1203,7 +1465,7 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .pay-money {padding-bottom: 3px;}
   .cat-cont {overflow: inherit; margin-bottom: 22px;}
   .cat-cont:before {position: absolute; content: ' ';  bottom: -6px; left: -20px; right: -20px; border-bottom: 1px solid #dbdbdb;}
-  body .button-stl {height: 35px; line-height: 35px; font-size: 18px;}
+  body .button-stl {height: 35px; line-height: 35px; font-size: 18px; display: inline-block;}
   .guest-h {margin-left: 14px; width: 150px;}
   .guest-reviews-h {padding-right: 0;}
   .search-result {display: none;}
@@ -1239,6 +1501,18 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .wr {max-width: 296px; padding-left: 12px; padding-right: 12px;}
   .cat-cont {width: 296px;}
   .result-detals {display: none;}
+  .hotel-info h2 {font-size: 24px; line-height: 30px;}
+  .hotel-info .pay-button {position: relative; bottom: auto; left: auto; margin: auto;}
+    .hotel-info .pay-button a, .hotel-info .pay-button button {font-size: 14px;}
+  .hotel-gal-bot button {top: -115px;}
+  .rates .ui-datepicker-group.ui-datepicker-group-last, .rates .ui-datepicker-group.ui-datepicker-group-first {width: 274px;}
+  .rates .ui-datepicker .ui-datepicker-next {margin-right: -9px; border: 0 !important;}
+  .rates .ui-datepicker .ui-datepicker-prev {margin-left: -9px; border: 0 !important;}
+  .search-check-cont {float: none; width: auto; clear: both; padding-top: 15px;}
+  .search-check {padding-top: 0; padding-right: 0; float: none;}
+  .search-check [class*=" cb-icon-"] {margin-top: 1px;}
+  .rates .pay-button {position: relative; left: auto;}
+  .rates .ui-datepicker-calendar td a.ui-state-act {width: 47px; margin: 0 -5px;}
 
 }
 

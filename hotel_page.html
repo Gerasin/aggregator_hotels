@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html><head>
+<!-- META -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-- JS -->
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.touch-punch.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.month-day.day-44').click();
+		$('.month-day.day-50').click();
+
+	});
+</script>
+
+<title>Homepage</title>
+</head>
+<body>
+<div class="body">
+	<div class="mob-search-box">
+				
+		<div class="wr">
+			<h2>Search hotels</h2>
+			<div class="head-detals">
+				<div class="head-search">
+					<div class="search-rooms">
+						<div class="inp-head">Rooms</div>
+						<select name="" class="select">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">50</option>
+						</select>
+					</div>
+					<div class="search-adults">
+						<div class="inp-head">Adults</div>
+						<div class="adults-box">
+							<div class="adults-ico adults-one"></div>
+							<div class="adults-ico adults-two"><button class="ico-close"></button></div>
+							<div class="adults-ico adults-big">×<span>3</span><button class="ico-close"></button></div>
+						</div>
+						<button class="adults-add"></button>
+						<input type="hidden" value="2">
+					</div>
+					<div class="search-children">
+						<div class="inp-head">Children</div>
+						<div class="children-box">
+
+							<div class="children-box-select">
+								<select name="" class="select">
+									<option value="1">0-5</option>
+									<option value="2">5-8</option>
+									<option value="3">8-12</option>
+									<option value="4">1</option>
+									<option value="5">2</option>
+									<option value="6">3</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+								</select>
+								<a href="" class="select-ok"></a>
+								<a href="" class="select-close"></a>
+							</div>
+						</div>
+						<button class="children-add"></button>
+						<input type="hidden" value="0">
+					</div>
+				</div>
+				<div class="head-search-city">
+					<div class="inp-head"></div>
+					<div class="inp-style">
+						<input type="text" value="New York, NY" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" >
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+			<div class="date-head">
+				<div class="date-header">
+					<div class="date-header-cont">
+						<span class="check-in">Choose Check-in date<em>:</em> <span>20th April</span><button class="ico-close"></button></span>
+						<span class="check-out">Choose Check-out date<em>:</em> <span>20th April</span><button class="ico-close"></button></span>
+					</div>
+					<p><label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label></p>
+				</div>
+			</div>
+			<div class="check-mob">
+				<div class="check-mob-in">
+					<div class="h3">Check-in</div>
+					<div class="check-date">
+						<select name="" class="select sel-day-1">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+						</select>
+					</div>
+					<div class="check-month">
+						<select name="" class="select sel-month-1">
+							<option value="2015, 6, ">Июнь</option>
+							<option value="2015, 7, ">Июль</option>
+							<option value="2015, 8, ">Август</option>
+						</select>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="check-mob-out">
+					<div class="h3">Check-in</div>
+					<div class="check-date">
+						<select name="" class="select sel-day-2">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+						</select>
+					</div>
+					<div class="check-month">
+						<select name="" class="select sel-month-2">
+							<option value="2015, 6, ">Июнь</option>
+							<option value="2015, 7, ">Июль</option>
+							<option value="2015, 8, ">Август</option>
+						</select>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="total_nights-main">
+					Total: <span>1</span> night<em>s</em> <button class="ico-close"></button>
+				</div>
+			</div>
+		</div>
+		<div class="wr">
+			<div class="total">
+				<h3>Total: <span>0</span> night<em>s</em></h3>
+				<div class="total-inp">
+					<input type="text" id="amount" class="pull-left range-min_input range_inputs"> <i>−</i> 
+					<input type="text" id="amount2" class="pull-right range-max_input range_inputs">
+					<div class="total-inp-header">
+						Price per night 
+						<div class="currency-sl">
+							<span>$</span>
+							<ul>
+								<li class="active"><em>$</em></li>
+								<li><em>€</em></li>
+								<li><em>RUB</em></li>
+								<li><em>£</em></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="total-slider">
+					<div id="slider-range" data-min="0" data-max="1000" data-step="1"></div>
+				</div>
+				<div class="total-button">
+					<button class="btn-st">Show 2 489 Hotels</button>
+					<div class="lnk-reset"><a href="">Reset search options</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="head-top">
+		<div class="wr">
+			<div class="logo pull-left"><h1><img src="img/logo.png" alt="">Search hotels</h1></div>
+			<div class="head-detal pull-right">
+				<div class="head-detal-option">
+					<div class="currency-select">
+						<span>€ <em>EUR</em></span>
+						<ul>
+							<li class="active">€ <em>EUR</em></li>
+							<li>$ <em>USD</em></li>
+							<li><em>RUB</em></li>
+							<li>£ <em>GBP</em></li>
+						</ul>
+					</div>
+				</div>
+				<div class="head-detal-option">
+					<div class="language-select">
+						<span><em class="fl-ico ang"></em></span>
+						<ul>
+							<li class="active"><i class="fl-ico ang"></i><em>English</em></li>
+							<li><i class="fl-ico rus"></i><em>Русский</em></li>
+							<li><i class="fl-ico nor"></i><em>Norsk</em></li>
+							<li><i class="fl-ico ind"></i><em>Bahasa Indonesia</em></li>
+						</ul>
+					</div>
+				</div>
+				<div class="head-detal-option">
+					<div class="head-detal-lnk"><a href="">Join</a></div>
+				</div>
+				<div class="head-detal-option last">
+					<div class="head-detal-lnk"><a href="" data-toggle="modal" data-target=".bs-example-modal-sm">Log in</a></div>
+				</div>
+			</div>
+
+			<div class="menu-open"><a href=""></a></div>
+			<a href="" class="menu-mob-search"></a>
+
+			<div class="menu-mob">
+				<ul class="menu-mob-ul">
+					<li><a href="">Join</a></li>
+					<li class="last"><a href="" data-toggle="modal" data-target=".bs-example-modal-sm">Log in</a></li>
+				</ul>
+				<div class="mob-menu-box last">
+					<div class="currency-select">
+						<span class="">€ <em>EUR</em></span>
+						<ul style="display: none;">
+							<li class="active">€ <em>EUR</em></li>
+							<li>$ <em>USD</em></li>
+							<li><em>RUB</em></li>
+							<li>£ <em>GBP</em></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mob-menu-box">
+					<div class="language-select">
+						<span class=""><i class="fl-ico ang"></i><em>English</em></em></span>
+						<ul style="display: none;">
+							<li class="active"><i class="fl-ico ang"></i></li>
+							<li><i class="fl-ico rus"></i></li>
+							<li><i class="fl-ico nor"></i></li>
+							<li><i class="fl-ico ind"></i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="menu-mob-bg"></div>
+		</div>
+	</div>
+	<div class="head-top-padding"></div>
+	<div class="head search-result">
+		<div class="wr">
+			<div class="head-search">
+				<div class="search-rooms">
+					<div class="inp-head"></div>
+					<select name="" class="select">
+						<option value="1">1 room</option>
+						<option value="2">2 room</option>
+						<option value="3">3 room</option>
+						<option value="4">4 room</option>
+						<option value="5">5 room</option>
+					</select>
+				</div>
+				<div class="search-adults">
+					<div class="inp-head">Adults</div>
+					<div class="adults-box">
+						<div class="adults-ico adults-one"></div>
+						<div class="adults-ico adults-two"><button class="ico-close"></button></div>
+						<div class="adults-ico adults-big">×<span>3</span> Adult<button class="ico-close"></button></div>
+					</div>
+					<button class="adults-add"></button>
+					<input type="hidden" value="2">
+				</div>
+				<div class="search-children">
+					<div class="inp-head">Children</div>
+					<div class="children-box">
+
+						<div class="children-box-select">
+							<select name="" class="select">
+								<option value="1">0-5</option>
+								<option value="2">5-8</option>
+								<option value="3">8-12</option>
+								<option value="4">1</option>
+								<option value="5">2</option>
+								<option value="6">3</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+							</select>
+							<a href="" class="select-ok"></a>
+							<a href="" class="select-close"></a>
+						</div>
+					</div>
+					<button class="children-add"></button>
+					<input type="hidden" value="0">
+				</div>
+
+				<div class="total_nights">
+					<div class="inp-head"></div>
+					<div class="lnk-reset"><a href="">Reset search</a></div>
+				</div>
+				<div class="inp-head"></div>
+				<button class="button-search">Search</button>
+			</div>
+			<div class="head-search-city">
+				<div class="inp-head"></div>
+				<div class="inp-style inp-style-i"><div class="inp-style-ico ico-maps"></div><input type="text" value="New York, NY" id="project" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" ></div>
+			</div>
+			<div class="clearfix"></div> 
+			<!-- del 24 <div class="search_around search_around-one">
+				Search around the city: <a href="" class="search_a-open" data-toggle="modal" data-target=".cities-around-sm">0 km</a>
+			</div> -->
+			<div class="search_around search_around-two">
+				Cities around required city: <span>No cities around 10 km</span> <button class="ico-close"></button></a>
+			</div>
+			<div class="calendar-button">
+				<a href="" class="calendar-prev"><!-- May 2015 --></a>
+				<a href="" class="calendar-next"><!-- July 2015 --></a>
+			</div>
+			<div class="total total-center">
+				<div class="checkbox-span date-header">
+					<label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label>
+				</div>
+				<div class="total-span h3">Total: <span>0</span> night<em>s</em> <div class="check-out check-ok"><button class="ico-close"></button></div></div>
+			</div>
+
+		</div>
+		<div class="calendar">
+			<div class="day-tooltip-box"><div class="day-tooltip"><span>Choose Check-out date</span></div></div>
+			<div class="month-cont">
+				<div class="month-cont-opt">
+					<div class="month" date-month="May 2015">
+						<div class="month-header">
+							<span>May</span>
+						</div>
+						<div class="month-day no-act" rel="1th June">
+							<div class="day-border">1</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="2th June">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day no-act" rel="3th June">
+							<div class="day-border">3</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day no-act" rel="4th June">
+							<div class="day-border">4</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day no-act" rel="5th June">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output no-act" rel="6th June">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output no-act" rel="7th June">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day no-act" rel="8th June">
+							<div class="day-border">8</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="9th June">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day no-act" rel="10th June">
+							<div class="day-border">10</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day no-act" rel="11th June">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day no-act" rel="12th June">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output no-act" rel="13th June">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output no-act" rel="14th June">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day no-act" rel="15th June">
+							<div class="day-border">15</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="16th June">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day no-act" rel="17th June">
+							<div class="day-border">17</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day no-act" rel="18th June">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day no-act" rel="19th June">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output no-act" rel="20th June">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output no-act" rel="21th June">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day no-act" rel="22th June">
+							<div class="day-border">22</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="23th June">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day no-act" rel="24th June">
+							<div class="day-border">24</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day no-act" rel="25th June">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day no-act" rel="26th June">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output no-act" rel="27th June">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output no-act" rel="28th June">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day no-act" rel="29th June">
+							<div class="day-border">29</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="30th June">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+					</div>
+					<div class="month active" date-month="June 2015">
+						<div class="month-header">
+							<span>June</span>
+						</div>
+						<div class="month-day no-act" rel="1th June">
+							<div class="day-border">1</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day no-act" rel="2th June">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day no-act" rel="3th June">
+							<div class="day-border">3</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day present_day act" rel="4th June">
+							<div class="day-tooltip-present" style="display: block;"><span>Choose Check-in date</span></div>
+							<div class="day-border">4</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="5th June">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="6th June">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="7th June">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="8th June">
+							<div class="day-border">8</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="9th June">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="10th June">
+							<div class="day-border">10</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="11th June">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="12th June">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="13th June">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="14th June">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="15th June">
+							<div class="day-border">15</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="16th June">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="17th June">
+							<div class="day-border">17</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="18th June">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="19th June">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="20th June">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="21th June">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="22th June">
+							<div class="day-border">22</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="23th June">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="24th June">
+							<div class="day-border">24</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="25th June">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="26th June">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="27th June">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="28th June">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="29th June">
+							<div class="day-border">29</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="30th June">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+					</div>
+					<div class="month" date-month="July 2015">
+						<div class="month-header">
+							<span>July</span>
+						</div>
+						<div class="month-day act" rel="1th July">
+							<div class="day-border">1</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="2th July">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="3th July">
+							<div class="day-border">3</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="4th July">
+							<div class="day-border">4</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="5th July">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="6th July">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="7th July">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="8th July">
+							<div class="day-border">8</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="9th July">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="10th July">
+							<div class="day-border">10</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="11th July">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="12th July">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="13th July">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="14th July">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="15th July">
+							<div class="day-border">15</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="16th July">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="17th July">
+							<div class="day-border">17</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="18th July">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="19th July">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="20th July">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="21th July">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="22th July">
+							<div class="day-border">22</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="23th July">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="24th July">
+							<div class="day-border">24</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="25th July">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="26th July">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="27th July">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="28th July">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="29th July">
+							<div class="day-border">29</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="30th July">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="31th July">
+							<div class="day-border">31</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+					</div>
+					<div class="month" date-month="August 2015">
+						<div class="month-header">
+							<span>August</span>
+						</div>
+						<div class="month-day act" rel="1th July">
+							<div class="day-border">1</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="2th July">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="3th July">
+							<div class="day-border">3</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="4th July">
+							<div class="day-border">4</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="5th July">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="6th July">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="7th July">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="8th July">
+							<div class="day-border">8</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="9th July">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="10th July">
+							<div class="day-border">10</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="11th July">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="12th July">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="13th July">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="14th July">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="15th July">
+							<div class="day-border">15</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="16th July">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="17th July">
+							<div class="day-border">17</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="18th July">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="19th July">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="20th July">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="21th July">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="22th July">
+							<div class="day-border">22</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="23th July">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="24th July">
+							<div class="day-border">24</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="25th July">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="26th July">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="27th July">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="28th July">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="29th July">
+							<div class="day-border">29</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="30th July">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="31th July">
+							<div class="day-border">31</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+					</div>
+					<div class="month" date-month="September 2015">
+						<div class="month-header">
+							<span>September</span>
+						</div>
+						<div class="month-day act" rel="1th July">
+							<div class="day-border">1</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="2th July">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="3th July">
+							<div class="day-border">3</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="4th July">
+							<div class="day-border">4</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="5th July">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="6th July">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="7th July">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="8th July">
+							<div class="day-border">8</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="9th July">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="10th July">
+							<div class="day-border">10</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="11th July">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="12th July">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="13th July">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="14th July">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="15th July">
+							<div class="day-border">15</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="16th July">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="17th July">
+							<div class="day-border">17</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="18th July">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="19th July">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="20th July">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="21th July">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="22th July">
+							<div class="day-border">22</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="23th July">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="24th July">
+							<div class="day-border">24</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="25th July">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="26th July">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="27th July">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="28th July">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="29th July">
+							<div class="day-border">29</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="30th July">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="31th July">
+							<div class="day-border">31</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+					</div>
+					<div class="month" date-month="October 2015">
+						<div class="month-header">
+							<span>October</span>
+						</div>
+						<div class="month-day act" rel="1th July">
+							<div class="day-border">1</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="2th July">
+							<div class="day-border">2</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="3th July">
+							<div class="day-border">3</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="4th July">
+							<div class="day-border">4</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="5th July">
+							<div class="day-border">5</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="6th July">
+							<div class="day-border">6</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="7th July">
+							<div class="day-border">7</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="8th July">
+							<div class="day-border">8</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="9th July">
+							<div class="day-border">9</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="10th July">
+							<div class="day-border">10</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="11th July">
+							<div class="day-border">11</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="12th July">
+							<div class="day-border">12</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="13th July">
+							<div class="day-border">13</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="14th July">
+							<div class="day-border">14</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="15th July">
+							<div class="day-border">15</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="16th July">
+							<div class="day-border">16</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="17th July">
+							<div class="day-border">17</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="18th July">
+							<div class="day-border">18</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="19th July">
+							<div class="day-border">19</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="20th July">
+							<div class="day-border">20</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="21th July">
+							<div class="day-border">21</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="22th July">
+							<div class="day-border">22</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="23th July">
+							<div class="day-border">23</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="24th July">
+							<div class="day-border">24</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+						<div class="month-day day-output act" rel="25th July">
+							<div class="day-border">25</div>
+							<div class="day-weekday">Sa</div>
+						</div>
+						<div class="month-day day-output act" rel="26th July">
+							<div class="day-border">26</div>
+							<div class="day-weekday">Su</div>
+						</div>
+						<div class="month-day act" rel="27th July">
+							<div class="day-border">27</div>
+							<div class="day-weekday">Mo</div>
+						</div>
+						<div class="month-day act" rel="28th July">
+							<div class="day-border">28</div>
+							<div class="day-weekday">Tu</div>
+						</div>
+						<div class="month-day act" rel="29th July">
+							<div class="day-border">29</div>
+							<div class="day-weekday">We</div>
+						</div>
+						<div class="month-day act" rel="30th July">
+							<div class="day-border">30</div>
+							<div class="day-weekday">Th</div>
+						</div>
+						<div class="month-day act" rel="31th July">
+							<div class="day-border">31</div>
+							<div class="day-weekday">Fr</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="wr">
+		<div class="back-list">&#8592; <a href="">Back to the list</a></div>
+		<div class="row-fluid">
+			<div class="span5">
+				<div class="hotel-info">
+					<h2>Hotel Branicki Ludwika Zamenhofa 4*</h2>
+					<div class="hot-bal">
+						<img src="img/hot-bal-ico.png" alt="" class="hot-bal-ico">
+						<p><span>81</span> / 100</p>
+						<a href="">509 reviews</a>
+					</div>
+					<div class="hot-from">
+						From <span>$89</span>
+					</div>
+					<div class="hot-night">
+						For 16 nights: $3145
+					</div>
+					<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
+					<div class="clearfix"></div>
+					<div class="cat-cont-rayt">
+						<span>
+							<img src="img/ico-vk.png" class="ico-vk" alt=""> <i>8.4</i> / 483 <em>reviews</em>
+						</span>
+						<span>
+							<img src="img/ico-rev.png" alt=""> <img src="img/rayting.png" alt=""> <i>4.7</i> / 603 <em>reviews</em>
+						</span>
+					</div>
+					<div class="hot-service">
+						<div class="hot-serv-box">
+							<span>Service</span>
+							<div class="hot-serv-ln"><em style="width: 80%"></em></div>
+							<i>9.3</i>
+						</div>
+						<div class="hot-serv-box">
+							<span>Comfort</span>
+							<div class="hot-serv-ln"><em style="width: 60%"></em></div>
+							<i>8.2</i>
+						</div>
+						<div class="hot-serv-box">
+							<span>Room</span>
+							<div class="hot-serv-ln"><em style="width: 30%"></em></div>
+							<i>6.2</i>
+						</div>
+					</div>
+					<div class="hot-km">
+						<div class="hot-km-lnk"><button class="btn-lnk">Map</button></div>
+						<div class="table-pay">
+							<div class="pay-item">
+								<span>$85.7</span>
+								<i>From city center</i>
+							</div>
+							<div class="pay-item">
+								<span>$89.7</span>
+								<i>Cleanliness index</i>
+							</div>
+							<div class="pay-item">
+								<span>$89.7</span>
+								<i>Rooms</i>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="top_options">
+						<h3>Top options</h3>
+						<ul>
+							<li><img src="img/ico-facilities.png" alt=""> Meeting/Banquet facilities <span>$75</span></li>
+							<li><img src="img/ico-sauna.png" alt=""> Sauna <span>$10</span></li>
+							<li><img src="img/ico-wi-fi.png" alt=""> Free Wi-Fi</li>
+							<li><img src="img/ico-restouran.png" alt=""> Restaurant <span>from $150</span></li>
+							<li><img src="img/ico-parking.png" alt=""> Parking <span>$5</span></li>
+						</ul>
+					</div>
+					<div class="reviews">
+						<div class="pay-button"><a href="" class="button-stl">Add Review</a></div>
+						<h3>Recent Reviews</h3>
+						<ul class="reviews-tab">
+							<li class="active"><button rel="#tab-1">View all</button></li>
+							<li><img src="img/ico-rev.png" alt=""><button rel="#tab-2">Tranio</button></li>
+							<li><img src="img/ico-s.png" alt=""><button rel="#tab-3">Booking</button></li>
+							<li><img src="img/ico-sear.png" alt=""><button rel="#tab-4">Search Hotels</button></li>
+						</ul>
+						<div class="reviews-items">
+							<div id="tab-1" class="reviews-item">
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 1
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>2.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.5</span> Very Good 2
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 3
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>5.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 4
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 5
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 6
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>2.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 7
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 8
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>5.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 9
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 10
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 11
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="listing-page"></div>
+							</div>
+							<div id="tab-2" class="reviews-item">
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 1
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>2.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.5</span> Very Good 2
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 3
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="listing-page"></div> 
+							</div>
+							<div id="tab-3" class="reviews-item">
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 1
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>2.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.5</span> Very Good 2
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 3
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>5.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 4
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 5
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 6
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>2.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 7
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 8
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>5.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 9
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 10
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="review-paging">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>1.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good 11
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+								</div>
+								<div class="listing-page"></div>
+							</div>
+							<div id="tab-4" class="reviews-item">
+								<div class="reviews-box">
+									<div class="reviews-bal">
+										<img src="img/ico-r.png" alt="">
+										<img src="img/rayting.png" alt="">
+										<span>4.0</span> Very Good
+									</div>
+									<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+									<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+								</div>
+								<div class="reviews-box">
+									<div class="reviews-bal">
+										<img src="img/ico-r.png" alt="">
+										<img src="img/rayting.png" alt="">
+										<span>4.0</span> Very Good
+									</div>
+									<div class="reviews-header">Еxceptional</div>
+									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+									<p>Bottle of water in room costs 8 eur :(</p>
+								</div>
+								<div class="reviews-box">
+									<div class="reviews-bal">
+										<img src="img/ico-r.png" alt="">
+										<img src="img/rayting.png" alt="">
+										<span>3.5</span> Very Good
+									</div>
+									<div class="reviews-header">First trip to Warsaw</div>
+									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+									<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+								</div>
+								<div class="listing-page"></div>
+							</div>
+						</div>
+						<div class="h2">Amenities</div>
+						<ul class="amenities">
+							<li>Air conditioning public areas</li>
+							<li>Pets not allowed</li>
+							<li>Conference Facilities</li>
+							<li>Free parking</li>
+							<li>Children's play area</li>
+							<li>Storage available</li>
+							<li>Gym</li>
+							<li>Terrace/Patio</li>
+							<li>Spa</li>
+							<li>Cribs available</li>
+							<li>Elevator/Lifts</li>
+							<li>Laundry facilities</li>
+							<li>Safe at reception</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="span7">
+				<div class="hotel-gallery">
+					<ul class="hotel-gal-top">
+						<li><img src="img/img-1.jpg" alt=""></li>
+						<li><img src="img/img-2.jpg" alt=""></li>
+						<li><img src="img/img-3.jpg" alt=""></li>
+						<li><img src="img/img-4.jpg" alt=""></li>
+						<li><img src="img/img-5.jpg" alt=""></li>
+						<li><img src="img/img-1.jpg" alt=""></li>
+						<li><img src="img/img-2.jpg" alt=""></li>
+						<li><img src="img/img-3.jpg" alt=""></li>
+						<li><img src="img/img-4.jpg" alt=""></li>
+						<li><img src="img/img-5.jpg" alt=""></li>
+					</ul>
+					<ul class="hotel-gal-bot">
+						<li><img src="img/img-1.jpg" alt=""></li>
+						<li><img src="img/img-2.jpg" alt=""></li>
+						<li><img src="img/img-3.jpg" alt=""></li>
+						<li><img src="img/img-4.jpg" alt=""></li>
+						<li><img src="img/img-5.jpg" alt=""></li>
+						<li><img src="img/img-1.jpg" alt=""></li>
+						<li><img src="img/img-2.jpg" alt=""></li>
+						<li><img src="img/img-3.jpg" alt=""></li>
+						<li><img src="img/img-4.jpg" alt=""></li>
+						<li><img src="img/img-5.jpg" alt=""></li>
+					</ul>
+				</div>
+				<div class="rates">
+					<div class="h2">Room rates</div>
+					<div class="rates-search">
+						<div class="rates-h3"><span class="Check-out ch-in">Choose check-in date</span><span class="ch-out">Choose check-out date</span></div>
+						<div id="datepicker"></div>
+						<div id="dateText"></div>
+					
+						<div class="rates-detals">	
+							<div class="search-adults">
+								<div class="inp-head">Adults</div>
+								<div class="adults-box">
+									<div class="adults-ico adults-one"></div>
+									<div class="adults-ico adults-two"><button class="ico-close"></button></div>
+									<div class="adults-ico adults-big">×<span>3</span> adult<button class="ico-close"></button></div>
+								</div>
+								<button class="adults-add"></button>
+								<input type="hidden" value="2">
+							</div>
+							<div class="search-children">
+								<div class="inp-head">Children</div>
+								<div class="children-box">
+
+									<div class="children-box-select">
+										<select name="" class="select">
+											<option value="1">0-5</option>
+											<option value="2">5-8</option>
+											<option value="3">8-12</option>
+											<option value="4">1</option>
+											<option value="5">2</option>
+											<option value="6">3</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+										</select>
+										<a href="" class="select-ok"></a>
+										<a href="" class="select-close"></a>
+									</div>
+								</div>
+								<button class="children-add"></button>
+								<input type="hidden" value="0">
+							</div>
+							<div class="search-check-cont">
+								<div class="search-check">
+									<input type="checkbox" id="searchCheck1"><label for="searchCheck1"><a href="" class="dotted">Free cancellation</a></label>
+								</div>
+								<div class="search-check last">
+									<input type="checkbox" id="searchCheck1"><label for="searchCheck1"><a href="" class="dotted">Breakfast included</a></label>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="pay-button"><button class="button-stl">Search for rooms</button></div>
+					</div>
+				</div>
+				<div class="h2">Good to know</div>
+				<div class="page-text">
+					<p>Kempinski Hotel Cathedral Square is located in the Old Town, at the Cathedral Square, in front of the Gediminas Tower. It offers elegant, air-conditioned rooms with free Wi-Fi and access to the spa centre. <br><br>
+
+					Each room at the Kempinski includes satellite TV and a view of the city. Pastel-coloured interiors include heavy, wooden furniture and subtle lighting. There is also a marble bathroom. <br> <br>
+
+					The hotel boasts an indoor swimming pool, as well as a variety of body treatments. There is a hot tub to relax in, a sauna and a Turkish bath.
+					</p>
+				</div>
+				<div class="h2">About</div>
+				<div class="page-text page-hide">
+					<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at the Arborea restaurant. Our a la carte menu offers modern European and Belarusian cuisine using the freshest seasonal products. Renaissance Minsk Hotel offers 6 multifunctional meeting rooms, business center and unique Grand Ballroom for up to 640 people, which will assure the success of your meeting. After a long day of meetings or sightseeing, rejuvenate in our SPA </p>
+					<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at</p>
+				</div>
+				<div class="page-text-open">
+					<button class="read-open" type="button">Read more</button>
+					<button class="read-hide" type="button">Read hide</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="wr">
+			<div class="copyright">2014 © Company Ltd. All rights reserved</div>
+			<ul class="footer-menu">
+				<li><a href="">About</a></li>
+				<li><a href="">Countries</a></li>
+				<li><a href="">Terms of use</a></li>
+				<li><a href="">Privacy policy</a></li>
+				<li><a href="">Contact us</a></li>
+			</ul>
+			<div class="clearfix"></div>
+			<div class="nineseven">
+				Designed by <a href="http://nineseven.ru/">Nineseven</a>
+			</div>
+			<div class="footer-comment">Easily find the best price and availability from all major travel websites at once.</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-sm">
+    	<div class="modal-content">
+    		<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      		<ul class="popup-tabs">
+      			<li class="active last"><a href="">Sign in</a></li>
+      			<li class="first"><a href="">Sign up</a></li>
+      		</ul>
+      		<div class="popup-cont">
+      			<div class="popup-form">
+      				<label for="id-email">Email address</label>
+      				<div class="popup-input"><input id="id-email" type="text"></div>
+      				<div class="popup-lnk"><a href="">Don't have account?</a></div>
+      				<label for="id-email">Password</label>
+      				<div class="popup-input"><input id="id-password" type="password"></div>
+      				<div class="popup-lnk"><a href="">Forgot your password?</a></div>
+      				<button class="button-stl">Login</button>
+      				<label><input type="checkbox"> Keep me signed in</label>
+      				<div class="sign-in-h"><span>or sign in with</span></div>
+      				<div class="pull-left"><a href="" class="fb"></a></div>
+      				<div class="pull-right"><a href="" class="tw"></a></div>
+      				<div class="clearfix"></div>
+      			</div>		
+      		</div>
+      		<div class="popup-cont">
+      			<div class="popup-form">
+      				<label for="id-email">Email address</label>
+      				<div class="popup-input"><input id="id-email" type="text"></div>
+      				<label for="id-email">Password</label>
+      				<div class="popup-input"><input id="id-password" type="password"></div>
+      				<button class="button-stl">Login</button>
+      				<label><input type="checkbox"> Send me Secret Deals</label>
+      				<div class="sign-in-h"><span>or sign in with</span></div>
+      				<div class="pull-left"><a href="" class="fb"></a></div>
+      				<div class="pull-right"><a href="" class="tw"></a></div>
+      				<div class="clearfix"></div>
+					<div class="popup-form-com">
+						By creating an account, you're agreeing with <br>
+						our <a href="">Terms and Conditions</a> and <a href="">Privacy Statement</a>.
+					</div>
+      			</div>		
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+<div class="modal fade cities-around-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-sm">
+    	<div class="modal-content">
+    		<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      		<div class="popup-st-box">
+      			<div class="popup-st-header">The cities around 25 km</div>
+      			<ul class="popup-st-form">
+      				<li><label><input type="checkbox"> Newark</label></li>
+      				<li><label><input type="checkbox"> Unioncity</label></li>
+      				<li><label><input type="checkbox"> Freeport</label></li>
+      				<li><label><input type="checkbox"> New Orlean</label></li>
+      				<li><label><input type="checkbox"> Newark</label></li>
+      				<li><label><input type="checkbox"> Unioncity</label></li>
+      				<li><label><input type="checkbox"> Freeport</label></li>
+      				<li><label><input type="checkbox"> New Orlean</label></li>
+      				<li><label><input type="checkbox"> Newark</label></li>
+      				<li><label><input type="checkbox"> Unioncity</label></li>
+      				<li><label><input type="checkbox"> Freeport</label></li>
+      				<li><label><input type="checkbox"> New Orlean</label></li>
+      			</ul>		
+				<div class="popup-btn-apply"><button class="button-stl cities_around-ok" data-dismiss="modal" aria-label="Close">Apply</button></div>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+<div class="modal fade quick-filters-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-sm">
+    	<div class="modal-content">
+    		<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      		<div class="popup-st-box">
+      			<div class="popup-st-header">Quick Filters</div>
+      			<div class="row-fluid">
+					<div class="span7">
+						<div class="popup-filter-h">Default Filters</div>
+						<ul class="popup-filter-list">
+							<li><a href="">Newark</a></li>
+							<li><a href="">Freeport</a></li>
+							<li><a href="">Unioncity</a></li>
+							<li><a href="">Mexiko</a></li>
+							<li><a href="">Vegas</a></li>
+							<li><a href="">Freeport</a></li>
+							<li><a href="">New Orlean</a></li>
+						</ul>
+					</div>
+					<div class="span5">
+						<div class="popup-filter-h">Your Filters</div>
+						<ul class="popup-filter-list">
+							<li><a href="">Unioncity</a></li>
+							<li><a href="">Freeport</a></li>
+							<li><a href="">New Orlean</a></li>
+							<li><a href="">Mexiko</a></li>
+							<li><a href="">Vegas</a></li>
+							<li><a href="">Freeport</a></li>
+						</ul>
+					</div>
+				</div>
+      		</div>
+    	</div>
+  	</div>
+</div>
+	
+</div>
+</body>
+</html>
