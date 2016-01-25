@@ -6252,7 +6252,7 @@ label.bootstrap-checkbox.disabled{
 .bootstrap-checkbox button.btn:hover > span.cb-icon-check-empty,
 .bootstrap-checkbox button.btn:focus > span.cb-icon-check-empty,
 .bootstrap-checkbox button.btn:active > span.cb-icon-check-empty{
-  background-position: -24px -23px;
+  background-position: -23px -23px;
 }
 
 .bootstrap-checkbox button.btn > span.cb-icon-check-indeterminate,

@@ -1561,7 +1561,6 @@ $(document).ready(function(){
 			indexActive = 'li.pag_' + indexActive;
 			itemBox.find('.listing-page').find(indexActive).addClass('active');
 		} else {
-			console.log('da');
 			itemBox.find('.listing-page').find('li').removeClass('active');
 			$(this).parents('li').addClass('active');
 		}
@@ -1577,10 +1576,132 @@ $(document).ready(function(){
 	$('.listing-page a').bind('click', pagination);
 
 
+	// Результат поика
+	$('.pay-button button').click(function(){
+		var nightsNamber = $('.ui-state-act').length + $('.ui-state-active').length;
+		if(nightsNamber > 0) {
+			$('.room_rates').show();
+			$('.good_know, .rates').hide();
+			$('.room-nights span').text(nightsNamber);
+			var dateTextRes = $('#dateText').html();
+			$('.room-date').html(dateTextRes);
+			pagerStart();
+		};
+		return false;
+	});
+	$('.room_rates-change').click(function(){
+		$('.room_rates').hide();
+		$('.good_know, .rates').show();
+		return false;
+	})
+
 	
 
-
 });
+
+
+function pagerStart() {
+	$('.hotel-pager').each(function(){
+		$(this).find('.hotel-pager-i:not(:first)').hide();
+		$(this).find('.hotel-pager-i:first').show();
+		var itemNamber = '';
+		var lengthItem = $(this).find('.hotel-pager-i').length;
+		if(lengthItem < 5) {
+			$(this).find('.hotel-pager-i').each(function(){
+				itenIndex = $(this).index() + 1;
+				itemNamber = itemNamber + '<li class="pag_' +itenIndex+ '"><a href="' + itenIndex + '">' + itenIndex + '</a></li>'
+			});
+			$(this).find('.pager-hotel').find('.li:first').addClass('active');
+			var itemHTML = "<ul>" + itemNamber + "</ul>";
+			$(this).find('.pager-hotel').html(itemHTML);
+			$(this).find('.pager-hotel').find('li:first').addClass('active');
+		} else {
+			for (var i = 1; i < 5; i++) {
+			   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+			};
+			itemNamber = itemNamber + '<li><span> ... </span></li>';
+			itemNamber = itemNamber + '<li class="pag_' +lengthItem+ '"><a href="'+ lengthItem +'">' + lengthItem + '</a></li>';
+			var itemHTML = "<ul>" + itemNamber + "</ul><span class='pager-right'><a href=''>Next</a></span>";
+			$(this).find('.pager-hotel').html(itemHTML);
+			$(this).find('.pager-hotel').find('li:first').addClass('active');
+		};
+		$('.pager-hotel .pager-right a').click(function(){
+			$(this).parents('.pager-hotel').find('li.active').next('li').find('a').click();
+			return false;
+		});
+		
+	});
+
+	var paginationHotel = function() {
+		var itemBox = $(this).parents('.hotel-pager');
+		$(this).parents('.hotel-pager').find('.hotel-pager-i').hide();
+		var indexClick = $(this).attr('href');
+		indexClickopen = --indexClick;
+		$(this).parents('.hotel-pager').find('.hotel-pager-i').eq(indexClickopen).show();
+		var lengthItemClick = $(this).parents('.hotel-pager').find('.hotel-pager-i').length;
+		var ItemLength = lengthItemClick;
+		var itemNamber = '';
+		var minClick = lengthItemClick - 3;
+		if(lengthItemClick > 4) {
+			if(indexClick < minClick && indexClick >= 1 && indexClick > 1) {
+				itemNamber = itemNamber + '<li class="pag_' +1+ '"><a href="1"'+ 1 +'">' + 1 + '</a></li>';
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				var indexClickStop = indexClick + 3
+				for (var i = indexClick; i < indexClickStop; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				itemNamber = itemNamber + '<li class="pag_' +lengthItemClick+ '"><a href="'+ lengthItemClick +'">' + lengthItemClick + '</a></li>';
+			};
+			if (indexClick <= 1) {
+				for (var i = 1; i < 5; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				itemNamber = itemNamber + '<li class="pag_' +lengthItemClick+ '"><a href="'+ lengthItemClick +'">' + lengthItemClick + '</a></li>';
+			}
+			var ClickMin = +lengthItemClick - 3;
+			if (++indexClick > ClickMin) {
+				itemNamber = itemNamber + '<li class="pag_' +1+ '"><a href="'+ 1 +'">' + 1 + '</a></li>';
+				itemNamber = itemNamber + '<li><span> ... </span></li>';
+				var itemMax = ++lengthItemClick
+				for (var i = lengthItemClick - 4; i < itemMax; i++) {
+				   itemNamber = itemNamber + '<li class="pag_' +i+ '"><a href="'+ i +'">' + i + '</a></li>';
+				};
+			}
+			var itemHTML = "<span class='pager-left'><a href=''>Previous</a></span><ul>" + itemNamber + "</ul><span class='pager-right'><a href=''>Next</a></span>";
+			$(this).parents('.hotel-pager').find('.pager-hotel').html(itemHTML);
+			var indexActive = ++indexClickopen;
+			indexActive = 'li.pag_' + indexActive;
+			itemBox.find('.pager-hotel').find(indexActive).addClass('active');
+		} else {
+			itemBox.find('.pager-hotel').find('li').removeClass('active');
+			$(this).parents('li').addClass('active');
+		}
+		$('.pager-hotel .pager-right a').click(function(){
+			$(this).parents('.pager-hotel').find('li.active').next('li').find('a').click();
+			return false;
+		});
+		$('.pager-hotel .pager-left a').click(function(){
+			$(this).parents('.pager-hotel').find('li.active').prev('li').find('a').click();
+			return false;
+		});
+		if (--indexClick <= 0) {
+			$('.pager-hotel .pager-left').hide();
+		};
+		if (++indexClick >= ItemLength) {
+			$('.pager-hotel .pager-right').hide();
+		};
+		
+		$('.pager-hotel ul a').unbind('click', paginationHotel);
+    	$('.pager-hotel ul a').bind('click', paginationHotel);
+		return false;
+	};
+
+	$('.pager-hotel ul a').bind('click', paginationHotel);
+}
+
+
 
 $(function() {
 // Календарь
@@ -1647,7 +1768,7 @@ $(function() {
     calendar.datepicker({
         numberOfMonths: 2,
         firstDay : "7",
-        dateFormat: 'dd.mm.yy',
+        dateFormat: '<span>' + 'd' + '</span> ' + 'MM',
         minDate: new Date(),
         "onSelect": function (dateText, inst) {
             
@@ -1661,9 +1782,9 @@ $(function() {
                 console.log(datepickerRange.startDate);
                 var d = datepickerRange.startDate;
                 var dateNew = new Date();
-				var newDateMin = new Date(d.valueOf()-24*60*60*1000*20);
+				var newDateMin = new Date(d.valueOf()-24*60*60*1000*19);
 				if(dateNew > newDateMin) { newDateMin = dateNew };
-				var newDateMax = new Date(d.valueOf()+24*60*60*1000*20);
+				var newDateMax = new Date(d.valueOf()+24*60*60*1000*19);
                 $('#datepicker').datepicker( "option", "minDate", newDateMin );
                 $('#datepicker').datepicker( "option", "maxDate", newDateMax );
                 

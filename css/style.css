@@ -639,7 +639,7 @@ body .ui-slider-horizontal .ui-slider-range {background: url(../img/sl-bg.gif) 0
     .hotel-serv {position: relative; height: 26px;}
       .hotel-serv-in {position: absolute; right: 0; margin: 0; padding: 0; width: 190px; text-align: right;}
         .hotel-serv-in li {list-style: none; display: inline-block; padding: 0 0 0 2px; font-size: 11px; min-width: 28px; text-align: left;}
-          .hotel-serv-in li img {vertical-align: top;}
+          .hotel-serv-in li img {vertical-align: top; margin-top: 1px;}
     .pay-total {position: relative;}
       .pay-total-in {position: absolute; right: 0; width: 190px; text-align: right;}
     .tabs-page {}
@@ -708,7 +708,7 @@ body .ui-slider-horizontal .ui-slider-range {background: url(../img/sl-bg.gif) 0
   .pager-right:before {position: absolute; content: ' '; top: 4px; right: 0; width: 6px; height: 10px; background: url(../img/sprite.png) -36px -89px no-repeat;}
   .pager-center ul {display: inline-block; margin: 0;}
     .pager-center ul li {list-style: none; margin: 0 4px; color: #6d8d15; display: inline-block;}
-      .pager-center ul li a.active {display: inline-block; width: 24px; height: 24px; line-height: 24px; background: #9abd27; border-radius: 3px; color: #fff; text-decoration: none;}
+      .pager-center ul li a.active, .pager-center ul li.active a {display: inline-block; width: 24px; height: 24px; line-height: 24px; background: #9abd27; border-radius: 3px; color: #fff; text-decoration: none;/* padding-top: 8px; */}
 .popup-form .button-stl {height: 43px; line-height: 41px; margin: 14px 0 10px;}
 .sign-in-h {position: relative; text-align: center; margin: 18px 0 16px;}
   .sign-in-h span {background: #fff; padding: 0 10px; font-size: 18px; position: relative; z-index: 10;}
@@ -804,11 +804,8 @@ body .button-stl-bl:active {background: #abc4e0;
 .check-month {float: left; width: 60%;}
   .check-month select, .check-date select, body .check-month .xdsoft_pretty, body .check-date .xdsoft_pretty {width: 100%;}
 .search-result .calendar-button {margin-top: 14px;}
-<<<<<<< HEAD
 .search-result .calendar {padding: 33px 0 0; margin-top: -31px;}
-=======
 .search-result .calendar {padding: 35px 0 0; margin-top: -38px;}
->>>>>>> d690bc61f55034c041a641e8512ca2beadc6968a
 .xdsoft_selectspinner .xdsoft_chooser {z-index: 50;}
 .sort-box-mob {display: none; padding: 20px 14px;}
   .sort-box-mob table {width: 100%;}
@@ -1037,7 +1034,7 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
     .hot-km .table-pay {padding: 0; margin: 0;}
     .pay-item {margin: 0;padding: 0 0 12px;}
     .hot-km-lnk {position: absolute; left: 215px; top: 0; font-size: 12px;}
-  .top_options {padding: 0 0 40px;}
+  .top_options {padding: 0 0 46px;}
     .top_options h3 {font-size: 18px; font-weight: normal;margin: 0 0 7px;line-height: 35px;}
     .top_options ul {padding: 0; margin: 0;}
       .top_options ul li {
@@ -1260,6 +1257,43 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
  body .btn-lnk:hover {text-decoration: none;}
 
 
+.room_rates {margin: 0 0 20px; display: none;}
+  .room_rates-info {overflow: hidden;padding: 0 0 10px;}
+    .room_rates-info .h2 {float: left; font-size: 24px; margin: 0; padding: 0; border: 0;}
+    .room_rates-change {display: inline-block; float: right; color: #6d8d15; text-decoration: none; border: 0; outline: none; padding: 0; background: none; border-bottom: 1px dashed #6d8d15; font-size: 18px;margin: 8px 0 0;}
+    .room_rates-change:hover {border-color: transparent;}
+    .room_rates-detal {float: right; color: #aaa; font-size: 12px;padding-right: 32px;padding-top: 7px;}
+  .room_rates-filter {overflow: hidden; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4;padding: 1px 0 0px;margin: 0 0 9px;}
+    .room_rates-filter .search-check {padding: 0 20px 0 0;}
+
+.hotel-item {border-bottom: 1px solid #e4e4e4; padding: 12px 0 8px; margin: 0 0 2px; position: relative; min-height: 100px;}
+  .hotel-detals {position: absolute; top: 0; right: 0;}
+  .hotel-item .button-stl {float: right; margin: 0; width: 99px;margin-top: 21px;}
+  .hotel-reset {float: right; width: 41px; height: 50px;padding-top: 24px;}
+    .hotel-reset button {display: block; border: 0; outline: none; width: 13px; height: 16px; background: url(../img/sprite.png) -38px -157px no-repeat;}
+    .hotel-reset button:hover {background-position: -38px -179px;}
+  .hotel-money {float: right; width: 125px; color: #aaaaaa; font-size: 12px;padding-top: 20px;}
+    .hotel-money strong {display: inline-block;width: 58px; text-align: right; font-size: 18px; color: #272525; font-weight: normal;}
+    .hotel-money p {margin: 0 0 5px;}
+  .hotel-cont {margin: 0 290px 0 0; font-size: 14px;}
+    .hotel-logo {padding: 0 0 6px;}
+    .hotel-cont p {font-size: 14px; line-height: 20px; padding: 0; margin: 0 0 5px;}
+    .hotel-cont .hotel-serv-in {position: relative; left: auto; right: auto; width: 100%; text-align: left;}
+    .hotel-cont .hotel-serv-in li img {margin: 1px 1px 0 0;}
+    .hotel-cont .hotel-serv-in li {padding-right: 2px;}
+  .room_rates .pager-center {padding-bottom: 20px; padding-top: 11px; margin: 0; position: relative;}
+    .room_rates-detal div {display: inline-block;}
+      .room_rates-detal span {color: #272525; font-size: 18px;}
+      .room_rates-detal .room-nights span {color: #272525; font-size: 12px; color: #aaa;}
+      .room-namber {padding-right: 26px;}
+      .room-nights {padding-right: 24px;}
+    .pager-hotel .pager-left {float: left; margin-top: 4px; position: absolute; left: 0;}
+    .pager-hotel .pager-right {float: right; margin-top: 4px; position: absolute; right: 0;}
+
+.room-nights {}
+
+
+
 @media screen and (min-width: 1200px) {
   .head {background-size: cover;}
   .inp-style {margin-right: 571px}
@@ -1284,7 +1318,9 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .reviews .pay-button {padding-top: 0;}
   .rates .ui-datepicker-group.ui-datepicker-group-last, .rates .ui-datepicker-group.ui-datepicker-group-first {width: 220px;}
   .rates-h3  {bottom: -5px;}
-  .rates .ui-datepicker-calendar td a.ui-state-act {width: 32px; margin: 0px -1px;}
+  .room_rates-detal {float: none; clear: both;}
+  .rates .ui-datepicker-calendar td.ui-state-act-in:after {width: 36px;}
+
 
 }
 @media screen and (max-width: 1000px) {
@@ -1378,7 +1414,11 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .reviews-tab li {padding: 0 4px;}
   .rates-search {padding-left: 10px; padding-right: 10px;}
   .rates .ui-datepicker-group.ui-datepicker-group-last, .rates .ui-datepicker-group.ui-datepicker-group-first {width: 198px;}
-  .rates .ui-datepicker-calendar td a.ui-state-act {width: 28px; margin: 0 -2px;}
+  .hotel-item .button-stl {width: 89px;}
+  .hotel-reset {width: 30px;}
+  .hotel-cont {margin: 0 228px 0 0;}
+  .search-check-cont { margin-right: -15px;}
+  .rates .ui-datepicker-calendar td.ui-state-act-in:after {width: 33px;}
 
 
 }
@@ -1516,8 +1556,18 @@ body .total .total-span {display: inline-block !important; float: none; font-siz
   .search-check {padding-top: 0; padding-right: 0; float: none;}
   .search-check [class*=" cb-icon-"] {margin-top: 1px;}
   .rates .pay-button {position: relative; left: auto;}
-  .rates .ui-datepicker-calendar td a.ui-state-act {width: 47px; margin: 0 -5px;}
-
+  .hotel-item .hotel-serv {position: relative; left: auto; bottom: auto;}
+  .hotel-serv .hotel-serv-in {text-align: left;}
+  .hotel-cont {margin: 0;}
+  .room_rates-filter .search-check {float: left;}
+  .room_rates-filter .search-check label {font-size: 12px;}
+  .room_rates-filter {padding: 3px 0 0px;}
+  .hotel-item {padding-bottom: 60px;}
+  .hotel-detals {top: auto; bottom: 0; left: 0; right: 0;}
+  .hotel-reset {padding-top: 33px;}
+  .hotel-item .button-stl {width: 115px;}
+  .room_rates-change {margin-top: 6px;}
+  .rates .ui-datepicker-calendar td.ui-state-act-in:after {width: 48px;}
 }
 
 
