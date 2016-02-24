@@ -1182,9 +1182,9 @@ $(document).ready(function(){
 	$('.tabs-lnk a.js-tab').click(function(){
 		$('.tabs-lnk li').removeClass('active');
 		$(this).parent('li').addClass('active');
-		$(this).parents('.tabs-page').find('.tabs-item').hide();
+		$(this).parents('.tabs-page').find('.tabs-item').slideUp();
 		var clickIndex = $(this).parent('li').index();
-		$(this).parents('.tabs-page').find('.tabs-cont').find('.tabs-item').eq(clickIndex).show();
+		$(this).parents('.tabs-page').find('.tabs-cont').find('.tabs-item').eq(clickIndex).slideDown();
 
 		if(!$(this).parents('.catalog-item').hasClass('active')) {
 			$(this).parents('.catalog-item').addClass('active');
@@ -1205,8 +1205,12 @@ $(document).ready(function(){
 		};
 	});
 	$('.cat-close a').click(function(){
-		$(this).parents('.catalog-item').removeClass('active');
-		$(this).parents('.catalog-item').find('.tabs-item').slideUp();
+		var self = this
+		function fun() {
+		   $(self).parents('.catalog-item').removeClass('active')
+		}
+		setTimeout(fun, 400);
+		$(this).parents('.catalog-item').find('.tabs-item').slideUp(500);
 		$(this).parents('.catalog-item').find('.tabs-lnk').removeClass('active');
 		$(this).parents('.catalog-item').find('.tabs-lnk').removeClass('active');
 		$(this).parents('.catalog-item').find('.tabs-lnk li').removeClass('active');
@@ -1593,7 +1597,47 @@ $(document).ready(function(){
 		$('.room_rates').hide();
 		$('.good_know, .rates').show();
 		return false;
+	});
+
+
+	/*---- new js -----*/
+	$('.show_all_rooms .lnk-open').click(function(){
+		$(this).parent().addClass('active');
+		$(this).parents('.hotel-item').addClass('item-open');
+		// $(this).parents('.hotel-item').find('.hotel-table').slideDown();
+		$(this).parents('.hotel-item').find('.hotel-hide').slideDown();
+		$(this).parents('.hotel-item').find('.less_rooms-txt').fadeIn();
+		$(this).parents('.hotel-item').find('.hotel-item-close').fadeIn();
+		return false;
+	});
+	$('.show_all_rooms .lnk-close, .hotel-item-close, .less_rooms-txt').click(function(){
+		$(this).parents('.hotel-item').find('.show_all_rooms').removeClass('active');
+		$(this).parents('.hotel-item').removeClass('item-open');
+		// $(this).parents('.hotel-item').find('.hotel-table').slideUp();
+		$(this).parents('.hotel-item').find('.hotel-hide').slideUp();
+		$(this).parents('.hotel-item').find('.less_rooms-txt').hide();
+		$(this).parents('.hotel-item').find('.hotel-item-close').hide();
+		return false;
+	});
+
+	$('.recent-item-in').hover(function(){
+		$(this).find('.recent-hide').slideDown(300);
+		$(this).addClass('active');
+	}, function(){
+		$(this).find('.recent-hide').slideUp(300);
+		var self = this
+		function fun() {
+		   $(self).removeClass('active')
+		}
+		setTimeout(fun, 300);
+	});
+
+	$('.hotel-item .hotel-reset button').click(function(){
+		$(this).parents('.hotel-detals').find('.tooltip').fadeIn();
+		setTimeout("$('.hotel-detals').find('.tooltip').fadeOut()", 1000)
+		return false;
 	})
+
 
 	
 
