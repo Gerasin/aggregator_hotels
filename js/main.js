@@ -1578,8 +1578,12 @@ $(document).ready(function(){
 		return false;
 	});
 	$('.room_rates-change').click(function(){
-		$('.room_rates').hide();
+		$('.rates').addClass('active');
 		$('.good_know, .rates').show();
+		return false;
+	});
+	$('.pay-button-close').click(function(){
+		$('.good_know, .rates').hide();
 		return false;
 	});
 
