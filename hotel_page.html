@@ -14,6 +14,8 @@
 <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/jquery.ui.touch-punch.js" type="text/javascript"></script>
+<script src="js/fotorama.js" type="text/javascript"></script>
+
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(window).load(function(){
@@ -327,7 +329,7 @@
 					<input type="hidden" value="2">
 				</div>
 				<div class="search-children">
-					<div class="inp-head">Children</div>
+					<div class="inp-head">Age of children</div>
 					<div class="children-box">
 
 						<div class="children-box-select">
@@ -368,7 +370,27 @@
 			</div>
 			<div class="head-search-city">
 				<div class="inp-head"></div>
-				<div class="inp-style inp-style-i"><div class="inp-style-ico ico-maps"></div><input type="text" value="New York, NY" id="project" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" ></div>
+				<div class="inp-style inp-style-i"><div class="inp-style-ico ico-maps"></div><input type="text" value="New York, NY" id="project" onfocus="if (this.value=='New York, NY') this.value='' " onblur="if (this.value==''){this.value='New York, NY'}" >
+				<a href="" class="property-name-open"></a>
+				<div class="property-name">
+					<div class="property-name__header">Property name:</div>
+						<div class="property-name__check">
+							<li><input type="checkbox" id="ch-hotel"><label for="ch-hotel"><span class="ch-ico hotel_ico-hot"></span> Hotel</label></li>
+							<li class="check_width"><input type="checkbox" id="ch-bed"><label for="ch-bed"><span class="ch-ico hotel_ico-bed"></span> Bed and Breakfast</label></li>
+							<li><input type="checkbox" id="ch-chain"><label for="ch-chain"><span class="ch-ico hotel_ico-cha"></span> Chain</label></li>
+							<li><input type="checkbox" id="ch-motel"><label for="ch-motel"><span class="ch-ico hotel_ico-mot"></span> Motel</label></li>
+							<li class="check_width"><input type="checkbox" id="ch-boutique"><label for="ch-boutique"><span class="ch-ico hotel_ico-bou"></span> Boutique Hotel</label></li>
+							<li><input type="checkbox" id="ch-hostel"><label for="ch-hostel"><span class="ch-ico hotel_ico-hos"></span> Hostel</label></li>
+							<li><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-apa"></span> Appart-Hotel</label></li>
+
+							<li class="check_width"><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-int"></span> Point of interest</label></li>
+							<li><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-air"></span> Airport</label></li>
+							<li><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-cit"></span> City</label></li>
+							<li class="check_width"><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-hot_eu"></span> Hotel Europa City Vilnius</label></li>
+							<li><input type="checkbox" id="ch-appart"><label for="ch-appart"><span class="ch-ico hotel_ico-gra"></span> Grata Hotel</label></li>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="clearfix"></div> 
 			<!-- del 24 <div class="search_around search_around-one">
@@ -382,10 +404,18 @@
 				<a href="" class="calendar-next"><!-- July 2015 --></a>
 			</div>
 			<div class="total total-center">
-				<div class="checkbox-span date-header">
-					<label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label>
+				
+				<div class="date-header date-header_result">
+					<div class="date-header-check">
+						<label class="checkbox inline"><input type="checkbox"> I don't have specific dates yet</label>
+					</div>
+					<div class="date-header-cont date-header-cont_new">
+						<span class="check-in">Choose Check-in date<em>:</em> <span>20th April</span><button class="ico-close"></button></span>
+						<span class="check-out">Choose Check-out date<em>:</em> <span>20th April</span><button class="ico-close"></button></span>
+						<div class="total-span h3 total-span-top">Total: <span>0</span> night<em>s</em> <div class="check-out check-ok"><button class="ico-close"></button></div></div>
+					</div>
+					
 				</div>
-				<div class="total-span h3">Total: <span>0</span> night<em>s</em> <div class="check-out check-ok"><button class="ico-close"></button></div></div>
 			</div>
 
 		</div>
@@ -1241,6 +1271,17 @@
 					<div class="reviews">
 						<div class="pay-button"><a href="" class="button-stl">Add Review</a></div>
 						<h3>Recent Reviews</h3>
+						<div class="show_reviews">
+							Show Reviews: 
+							<div class="sort_form">
+								<div class="sort_form__head">Only Good and Excellent</div>
+								<ul class="sort_form__list">
+									<li><a href="" class="active"><em>Only Good and Excellent</em></a></li>
+									<li><a href=""><em>Only Good</em></a></li>
+									<li><a href=""><em>Only Excellent</em></a></li>
+								</ul>
+							</div>
+						</div>
 						<ul class="reviews-tab">
 							<li class="active"><button rel="#tab-1">View all</button></li>
 							<li><img src="img/ico-rev.png" alt=""><button rel="#tab-2">Tranio</button></li>
@@ -2113,30 +2154,21 @@
 			</div>
 			<div class="span7">
 				<div class="hotel-gallery">
-					<ul class="hotel-gal-top">
-						<li><img src="img/img-1.jpg" alt=""></li>
-						<li><img src="img/img-2.jpg" alt=""></li>
-						<li><img src="img/img-3.jpg" alt=""></li>
-						<li><img src="img/img-4.jpg" alt=""></li>
-						<li><img src="img/img-5.jpg" alt=""></li>
-						<li><img src="img/img-1.jpg" alt=""></li>
-						<li><img src="img/img-2.jpg" alt=""></li>
-						<li><img src="img/img-3.jpg" alt=""></li>
-						<li><img src="img/img-4.jpg" alt=""></li>
-						<li><img src="img/img-5.jpg" alt=""></li>
-					</ul>
-					<ul class="hotel-gal-bot">
-						<li><img src="img/img-1.jpg" alt=""></li>
-						<li><img src="img/img-2.jpg" alt=""></li>
-						<li><img src="img/img-3.jpg" alt=""></li>
-						<li><img src="img/img-4.jpg" alt=""></li>
-						<li><img src="img/img-5.jpg" alt=""></li>
-						<li><img src="img/img-1.jpg" alt=""></li>
-						<li><img src="img/img-2.jpg" alt=""></li>
-						<li><img src="img/img-3.jpg" alt=""></li>
-						<li><img src="img/img-4.jpg" alt=""></li>
-						<li><img src="img/img-5.jpg" alt=""></li>
-					</ul>
+					<div class="gallery_btn--prev"></div>
+					<div class="gallery_btn--next"></div>
+					<div class="hotel-gal-top fotorama" data-nav="thumbs" data-keyboard="true" data-width="100%">
+						<img src="img/img-1.jpg" alt="">
+						<img src="img/img-7.jpg" alt="">
+						<img src="img/img-3.jpg" alt="">
+						<img src="img/img-4.jpg" alt="">
+						<img src="img/img-5.jpg" alt="">
+						<img src="img/img-6.jpg" alt="">
+						<img src="img/img-1.jpg" alt="">
+						<img src="img/img-2.jpg" alt="">
+						<img src="img/img-3.jpg" alt="">
+						<img src="img/img-4.jpg" alt="">
+						<img src="img/img-5.jpg" alt="">
+					</div>
 				</div>
 				<div class="rates_new-cont">
 					<div class="rates">

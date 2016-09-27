@@ -769,11 +769,12 @@ $(document).ready(function(){
 	// Количество детей
 	$('.children-box-select').hide();
 	$('.children-add').click(function(){
-		console.log('da')
 		adultsBox = $(this).parent('div');
 		adultsBox.find('.children-box-select').show();
 		selectInp = $('.search-children input').val();
 		$('.search-children .children-add').hide();
+		$('.children_1').hide();
+		$('.children_2').show();
 		return false;
 	});
 
@@ -812,11 +813,13 @@ $(document).ready(function(){
 		$('.search-children .ico-close').click(function(){
 			$(this).parents('.children-ico').remove();
 			$('.search-children .children-add').show();
-			childrenNamber = $('.children-ico').length;
+			childrenNamber = $('.js-children-box').find('.children-ico').length;
 			$('.search-children input').val(childrenNamber);
 			return false;
 		});
 		if(selectInp < 3) {$('.search-children .children-add').show();}
+		$('.children_2').hide();
+		$('.children_1').show();
 		return false;
 	});
 
@@ -825,6 +828,8 @@ $(document).ready(function(){
 		adultsBox.find('.children-box-select').hide();
 		selectInp = $('.search-children input').val();
 		$('.search-children .children-add').show();
+		$('.children_2').hide();
+		$('.children_1').show();
 		return false;
 	})
 
@@ -1106,13 +1111,13 @@ $(document).ready(function(){
 	})
 
 	// Открытие дополнительного поиска
-	$('.s_d-open').click(function(){
+	$('.s_d-open, .show_filters').click(function(){
 		if(!$(this).hasClass('active')) {
-			$(this).addClass('active');
+			$('.s_d-open, .show_filters').addClass('active');
 			$('.search-detals').addClass('active');
 			$('.s_d-box, .search-btn').slideDown();
 		} else {
-			$(this).removeClass('active');
+			$('.s_d-open, .show_filters').removeClass('active');
 			$('.s_d-cont').slideDown();
 			$('.search-detals').removeClass('active');
 			$('.s_d-box, .search-btn').slideUp();
@@ -1164,15 +1169,32 @@ $(document).ready(function(){
 
 	// Табы в отеле
 	$('.tabs-lnk a.js-tab').click(function(){
-		$('.tabs-lnk li').removeClass('active');
-		$(this).parent('li').addClass('active');
-		$(this).parents('.tabs-page').find('.tabs-item').slideUp();
-		var clickIndex = $(this).parent('li').index();
-		$(this).parents('.tabs-page').find('.tabs-cont').find('.tabs-item').eq(clickIndex).slideDown();
+		if($(this).parent('li').hasClass('active')) {
+			$('.tabs-item').slideUp(500); 
+			$('.tabs-lnk li').removeClass('active');
+			setTimeout("$('.catalog-item').removeClass('active')", 500)
+		} else {
+			$('.tabs-lnk li').removeClass('active');
+			$(this).parent('li').addClass('active');
+			$(this).parents('.tabs-page').find('.tabs-item').slideUp();
+			var clickIndex = $(this).parent('li').index();
+			$(this).parents('.tabs-page').find('.tabs-cont').find('.tabs-item').eq(clickIndex).slideDown();
 
-		if(!$(this).parents('.catalog-item').hasClass('active')) {
-			$(this).parents('.catalog-item').addClass('active');
+			if(!$(this).parents('.catalog-item').hasClass('active')) {
+				$(this).parents('.catalog-item').addClass('active');
+			};
 		};
+		$(this).parents('.catalog-item').addClass('act_add');
+		$('.catalog-item.active').each(function(){
+			console.log('0');
+			if(!$(this).hasClass('act_add')) 
+			{
+				$(this).find('.tabs-item').slideUp(500); 
+				$(this).find('.tabs-lnk li').removeClass('active');
+				$(this).removeClass('active');
+			}
+		});
+		$(this).parents('.catalog-item').removeClass('act_add');
 		return false;
 	});
 
@@ -1195,7 +1217,6 @@ $(document).ready(function(){
 		}
 		setTimeout(fun, 400);
 		$(this).parents('.catalog-item').find('.tabs-item').slideUp(500);
-		$(this).parents('.catalog-item').find('.tabs-lnk').removeClass('active');
 		$(this).parents('.catalog-item').find('.tabs-lnk').removeClass('active');
 		$(this).parents('.catalog-item').find('.tabs-lnk li').removeClass('active');
 		return false;
@@ -1426,7 +1447,7 @@ $(document).ready(function(){
 
 
 	// Галлерея на страничке отеля
-	$('.hotel-gal-top').slick({
+	/*$('.hotel-gal-top').slick({
 	  	slidesToShow: 1,
 	  	slidesToScroll: 1,
 	  	arrows: false,
@@ -1453,7 +1474,18 @@ $(document).ready(function(){
 	      }
 	    }
 	    ]
+	});*/
+
+	
+	$('.gallery_btn--next').on( "click", function() { 
+		var fotorama = $(this).parents('.hotel-gallery').find('.fotorama').data('fotorama');
+		fotorama.show('>')
 	});
+	$('.gallery_btn--prev').on( "click", function() { 
+		var fotorama = $(this).parents('.hotel-gallery').find('.fotorama').data('fotorama');
+		fotorama.show('<')
+	});
+
 
 
 	$('.page-text-open .read-open').click(function(){
@@ -1634,21 +1666,14 @@ $(document).ready(function(){
 			$('.hotel-img-sl').stop().fadeOut().animate({'opacity' : 0});
 			$(this).addClass('active');
 			var photoThis = $(this).next('.hotel-img-sl');
-			photoThis.show().stop().animate({'opacity' : 1}).find('.img-sl--slider').slick({
-			  dots: true,
-			  infinite: true,
-			  speed: 300,
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
-			  dots: false
-			});
+			photoThis.show().stop().animate({'opacity' : 1});
 			$('.img-sl--slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 				nextSlideN = ++nextSlide;
 				$(this).parents('.img-sl--img').find('.sl-index').text(nextSlideN);
 			});
 			var indexLength = photoThis.find('.img-sl--slider li').length - 2;
 			photoThis.find('.sl-index-length').text(indexLength);
-			var scrollPopap = photoThis.offset().top - 70;
+			var scrollPopap = photoThis.offset().top - 150;
 			$('html, body').animate({'scrollTop' : scrollPopap});
 		};
 		return false;
@@ -1667,8 +1692,78 @@ $(document).ready(function(){
 		$(this).parents('.img-sl--img').find('.slick-prev').click();
 		return false;
 	});
+
+	/*-------- new js ---------*/
+	$('.property-name-open').click(function(){
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$('.property-name').fadeOut();
+		} else {
+			$(this).addClass('active');
+			$('.property-name').fadeIn();
+		};
+		return false;
+	});
+
+	
+	$('.search-more-filters__lnk').click(function(){
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).next('.search-more-filters__body').fadeOut();
+		} else {
+			$(this).addClass('active');
+			$(this).next('.search-more-filters__body').fadeIn();
+		};
+		return false;
+	});
+	$('.search-more-filters__body-close').click(function(){
+		$('.search-more-filters__body').fadeOut();
+		$('.search-more-filters__lnk').removeClass('active');
+		return false;
+	});
+
+	$('.cat-img-in-list a').click(function(){
+		if($(this).parent('li').hasClass('last')) {} else {
+			var imgSrc = $(this).attr('href');
+			$(this).parents('.cat-img-in-gall').find('.cat-img-in-top img').attr('src', imgSrc);
+			return false;
+		}
+	});
+
+	$('.sort_form__head').click(function(){
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).next().slideUp();
+		} else {
+			$(this).addClass('active');
+			$(this).next().slideDown();
+		};
+		return false;
+	});
+	$('.sort_form__list a').click(function(){
+		$(this).parents('.sort_form__list').find('a').removeClass('active');
+		$(this).addClass('active');
+		$(this).parents('.sort_form').find('.sort_form__head').text($(this).text());
+		$(this).parents('.sort_form__list').slideUp();
+		$(this).parents('.sort_form').find('.sort_form__head').removeClass('active');
+		return false;
+	});
+
+
 	
 
+	/*-------- new js ---------*/
+	
+
+});
+
+
+$(window).load(function() {
+	
+
+	$('.catalog-item').each(function(){
+		$(this).parent('.catalog-item-box').height($(this).height() + 40);
+	});
 });
 
 
@@ -2389,6 +2484,38 @@ $(document).mouseup(function (e){
   		$('.hotel-img-sl').stop().fadeOut().animate({'opacity' : 0});
   		$('.photo-open').removeClass('active');
   	};
+
+  	var container9 = $(".property-name, .property-name-open"); 
+  		if (!container9.is(e.target) && container9.has(e.target).length === 0){
+  		$('.property-name').stop().fadeOut();
+  		$('.property-name-open').removeClass('active');
+  	};
+
+  	var container10 = $(".search-more-filters__body, .search-more-filters__lnk"); 
+  		if (!container10.is(e.target) && container10.has(e.target).length === 0){
+  		$('.search-more-filters__body').fadeOut();
+		$('.search-more-filters__lnk').removeClass('active');
+  	};
+
+  	var container10 = $(".sort_form"); 
+  		if (!container10.is(e.target) && container10.has(e.target).length === 0){
+  		$('.sort_form__list').slideUp();
+		$('.sort_form__head').removeClass('active');
+  	};
+
+  	var container11 = $(".catalog-item"); 
+  		if (!container11.is(e.target) && container11.has(e.target).length === 0){
+  		function fun() {
+		   $('.catalog-item').removeClass('active')
+		};
+		setTimeout(fun, 400);
+		$('.catalog-item').find('.tabs-item').slideUp(500);
+		$('.catalog-item').find('.tabs-lnk').removeClass('active');
+		$('.catalog-item').find('.tabs-lnk li').removeClass('active');
+  	};
+
+
+  	
 
 
   	
