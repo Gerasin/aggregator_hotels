@@ -1566,6 +1566,12 @@ body .dotted {text-decoration: none; border-bottom: 1px dotted #99ad6d;}
   .rates .ui-datepicker-calendar td.ui-state-act-in:after {width: 36px;}
   .property-name-open {display: none;}
   .property-name {display: none !important;}
+  .result-detals {width: auto;}
+  .cat-cont {width: 660px;}
+  .cat-cont-pay {min-height: 175px;}
+  .tabs-item .hotel-money {margin-right: -188px;}
+  .date-header-cont_new {text-align: center; clear: both; top: 10px; position: relative;}
+
 
 
 }
@@ -1673,7 +1679,10 @@ body .dotted {text-decoration: none; border-bottom: 1px dotted #99ad6d;}
   .tabs-item .hotel-cont {margin: 0;}
   .service-check, .tabs-item .hotel-item .button-stl {position: relative; z-index: 20;}
   .show_all_rooms {z-index: 22;}
-  
+  .cat-img-in-gall {width: 170px !important;}
+  .tabs-item .hotel-money {margin-right: -234px !important; width: 100px !important;}
+  .tabs-item .hotel-cont {width: 255px !important;}
+  .hotel-item .service-check__cont {width: 166px !important;}
 
 
 }
@@ -1823,6 +1832,12 @@ body .dotted {text-decoration: none; border-bottom: 1px dotted #99ad6d;}
   .hotel-item .button-stl {width: 115px;}
   .room_rates-change {margin-top: 6px;}
   .rates .ui-datepicker-calendar td.ui-state-act-in:after {width: 48px;}
+  .cat-cont-pay {min-height: 50px;}
+  .hotel_ico {position: relative; right: auto; top: 4px; display: inline-block; margin-right: 2px;}
+  .cat-img-in-gall {width: 100% !important;}
+  .hotel-serv .hotel-serv-in {text-align: center;}
+  .pay-url {padding-top: 0 !important;}
+  body .cat-cont-main {padding-bottom: 13px; padding-right: 0;}
 }
 
 

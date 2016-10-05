@@ -1759,8 +1759,13 @@ $(document).ready(function(){
 
 
 $(window).load(function() {
-	
+	$('.catalog-item').each(function(){
+		$(this).parent('.catalog-item-box').height($(this).height() + 40);
+	});
+});
 
+$(window).resize(function() {
+	$('.catalog-item-box').css({'height' : 'auto'});
 	$('.catalog-item').each(function(){
 		$(this).parent('.catalog-item-box').height($(this).height() + 40);
 	});
