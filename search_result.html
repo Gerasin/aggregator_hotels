@@ -16,6 +16,20 @@
 <script src="js/jquery.ui.touch-punch.js" type="text/javascript"></script>
 <script src="js/fotorama.js" type="text/javascript"></script>
 
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script src="js/source/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="js/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script src="js/source/jquery.fancybox.pack.js?v=2.1.5" type="text/javascript"></script>
+<link href="js/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" rel="stylesheet" />
+<script src="js/source/helpers/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
+<script src="js/source/helpers/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
+
+<link href="js/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" rel="stylesheet" media="screen" />
+<script src="js/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
+
+
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(window).load(function(){
@@ -1504,20 +1518,20 @@
 					<div class="s_d-slider" data-min="40" data-max="730" data-step="10"></div>
 				</div>
 			</div>
-			<div class="s_d-border"></div>
+			<div class="s_d-border-solide"></div>
 			<div class="s_d-inp">
 				<h4>Reviews</h4>
 				<input type="text" class="range_input range_input-one">
 				<div class="range-box">
-					<label><input type="checkbox" class="checkbox"> <img src="img/ico-r-big.png" alt=""></label>
 					<label><input type="checkbox" class="checkbox"> <img src="img/ico-s-big.png" alt=""></label>
+					<label><input type="checkbox" class="checkbox"> <img src="img/ico-r-big.png" alt=""></label>
 				</div>
 				<div class="s_d-slide">
 					<div class="s_d-slid" data-min="4" data-max="700" data-step="1"></div>
 				</div>
 			</div>
-			<div class="s_d-border"></div>
-			<div class="s_d-inp s_d-bg">
+			<div class="s_d-border-solide"></div>
+			<div class="s_d-inp">
 				<h4>Hotel stars</h4>
 				<div class="row-fluid">
 					<div class="span4">
@@ -1539,8 +1553,61 @@
 					</div>
 				</div>
 			</div>
+			<div class="s_d-border-solide"></div>
+			<div class="s_d-inp">
+				<h4>Amenities</h4>
+				<p class="filter-icons"><span><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"></span> Breakfast:</p>
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> Any</label>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> Included</label>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> No</label>
+						</div>
+					</div>
+				</div>
+				<div class="s_d-border"></div>
+				<p class="filter-icons"><span><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"></span> Wi Fi:</p>
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> Any</label>
+						</div>
+					</div>
+					<div class="span8">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> In the room</label>
+						</div>
+					</div>
+				</div>
+				<div class="s_d-border"></div>
+				<p class="filter-icons"><span><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"></span> Parking:</p>
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> Any</label>
+						</div>
+					</div>
+					<div class="span8">
+						<div class="range-box">
+							<label><input type="checkbox" class="checkbox"> No parking</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="filter-btn pay-button__right"><a href="" class="button-stl">Book now</a></div>
+				<div class="filter-btn"><a href="" class="button-stl button-stl-filter">More Filters</a></div>
+			</div>
 		</div>
-		<div class="filter-mob-lnk"><a href="" class="filter-hide">Hide filter</a><a href="" class="filter-show">Show filter</a></div>
 	</div>
 
 	<div class="sort-box">
@@ -1671,11 +1738,118 @@
 							<div class="pay-money">from <strong>$89</strong></div>
 							<div class="pay-url"><a href="">Hotel website</a></div>
 							<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
+							<div class="info-button"><a href="#modal-1" class="button-stl various" >Info</a></div>
+							<div class="info-modal-none">
+								<div class="info-modal" id="modal-1">
+									<div class="cat-cont-main">
+										<div class="pay-button pay-button-top"><a href="" class="button-stl">Book now</a></div>
+										<h3><a href=""><span class="hotel_ico hotel_ico-int"></span> Holiday Inn Paris Saint Germain des Prés</a> 4*
+										</h3>
+										<div class="modal-tabs">
+											<table>
+												<tr>
+													<td><a href="" class="active"><img src="img/tab-ico-1.png" alt=""> Reviews</a></td>
+													<td><a href=""><img src="img/tab-ico-2.png" alt=""> Link</a></td>
+													<td><a href=""><img src="img/tab-ico-3.png" alt=""> Amenities</a></td>
+													<td><a href=""><img src="img/tab-ico-4.png" alt=""> Link</a></td>
+													<td class="last"><a href=""><img src="img/tab-ico-5.png" alt=""> Link</a></td>
+												</tr>
+											</table>
+										</div>
+										<div class="modal-tabs-list">
+											<div class="modal-tabs-item">
+												<div class="reviews-box">
+													<div class="reviews-bal">
+														<img src="img/ico-r.png" alt="">
+														<img src="img/rayting.png" alt="">
+														<span>4.0</span> Very Good
+													</div>
+													<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+													<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+													<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+												</div>
+												<div class="reviews-box">
+													<div class="reviews-bal">
+														<img src="img/ico-r.png" alt="">
+														<img src="img/rayting.png" alt="">
+														<span>4.0</span> Very Good
+													</div>
+													<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+													<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+													<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+												</div>
+												<div class="reviews-box">
+													<div class="reviews-bal">
+														<img src="img/ico-r.png" alt="">
+														<img src="img/rayting.png" alt="">
+														<span>4.0</span> Very Good
+													</div>
+													<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+													<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+													<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+												</div>
+											</div>
+											<div class="modal-tabs-item"></div>
+											<div class="modal-tabs-item">
+												<div class="hotel-cont">
+													<div class="hotel-serv">
+														<ul class="hotel-serv-in">
+															<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"> 68 m<sup>2</sup></li>
+															<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"> $10</li>
+															<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"> $3</li>
+															<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"> $15</li>
+														</ul>
+													</div>
+													<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+													<p>Standard King or Twin Room - Non-refundable</p>
+													<div class="amenities-footer">
+														<div class="amenities-footer-lnk"><a href="">Show all rooms</a></div>
+														<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
+													</div>
+												</div>
+												<div class="hotel-cont">
+													<div class="hotel-serv">
+														<ul class="hotel-serv-in">
+															
+															<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"> $10</li>
+															<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"> $3</li>
+															<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="Password at the reception"> $15</li>
+														</ul>
+													</div>
+													<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+													<p>Standard King or Twin Room - Non-refundable</p>
+													<div class="amenities-footer">
+														<div class="amenities-footer-lnk"><a href="">Show all rooms</a></div>
+														<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
+													</div>
+												</div>
+												<div class="hotel-cont">
+													<div class="hotel-serv">
+														<ul class="hotel-serv-in">
+															<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"> 68 m<sup>2</sup></li>
+															<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="" alt="" data-original-title="first tooltip"> $10</li>
+														</ul>
+													</div>
+													<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+													<p>Standard King or Twin Room - Non-refundable</p>
+													<div class="amenities-footer">
+														<div class="amenities-footer-lnk"><a href="">Show all rooms</a></div>
+														<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-tabs-item"></div>
+											<div class="modal-tabs-item"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
 							<div class="hotel-serv">
 								<ul class="hotel-serv-in">
-									<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 1500 Р</li>
-									<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> 1500 Р</li>
-									<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> 50 000 Р</li>
+									<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+									<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+									<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 								</ul>
 							</div>
 							<div class="pay-total">

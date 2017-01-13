@@ -1750,7 +1750,27 @@ $(document).ready(function(){
 	});
 
 
-	
+	$(".various").fancybox({
+		fitToView	: false,
+		width		: '100%',
+		height		: 'auto',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+
+	$('.modal-tabs-list').each(function(){
+		$(this).find('.modal-tabs-item:not(:first)').hide()
+	});
+	$('.modal-tabs a').on('click', function () {
+		$(this).parents('table').find('a').removeClass('active');
+		$(this).addClass('active');
+		var clickTab = $(this).parent().index();
+		$(this).parents('.cat-cont-main').find('.modal-tabs-item').hide();
+		$(this).parents('.cat-cont-main').find('.modal-tabs-list .modal-tabs-item').eq(clickTab).show()
+		return false;
+	});
 
 	/*-------- new js ---------*/
 	
@@ -2520,7 +2540,7 @@ $(document).mouseup(function (e){
   	};
 
 
-  	
+
 
 
   	
