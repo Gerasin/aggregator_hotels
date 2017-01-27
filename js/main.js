@@ -1445,37 +1445,6 @@ $(document).ready(function(){
 		return false;
 	});
 
-
-	// Галлерея на страничке отеля
-	/*$('.hotel-gal-top').slick({
-	  	slidesToShow: 1,
-	  	slidesToScroll: 1,
-	  	arrows: false,
-	  	asNavFor: '.hotel-gal-bot'
-	});
-	$('.hotel-gal-bot').slick({
-	  	slidesToShow: 7,
-	  	slidesToScroll: 1,
-	  	asNavFor: '.hotel-gal-top',
-	  	dots: false,
-	  	centerMode: false,
-	  	focusOnSelect: true,
-	  	responsive: [
-	    {
-	      breakpoint: 1000,
-	      settings: {
-	        slidesToShow: 5
-	      }
-	    },
-	    {
-	      breakpoint: 765,
-	      settings: {
-	        slidesToShow: 3
-	      }
-	    }
-	    ]
-	});*/
-
 	
 	$('.gallery_btn--next').on( "click", function() { 
 		var fotorama = $(this).parents('.hotel-gallery').find('.fotorama').data('fotorama');
@@ -1773,6 +1742,65 @@ $(document).ready(function(){
 	});
 
 	/*-------- new js ---------*/
+
+	if($('.reviews-box').length) {
+		$('.reviews-box:first').addClass('active')
+	};
+
+	$('.next-review-mob').on('click', function () {
+		var reviewsIndex = $('.reviews-box.active').index();
+		reviewsIndex = ++reviewsIndex;
+		$('.reviews-box.active').removeClass('active');
+		$('.reviews-box').eq(reviewsIndex).addClass('active')
+		return false;
+	});
+	$('.mobile-header').on('click', function () {
+		if($(window).width() < 768) {
+			if($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				$(this).next('.mobile-body').slideDown();
+			} else {
+				$(this).addClass('active');
+				$(this).next('.mobile-body').slideUp();
+			}
+		}
+	});
+
+	$('.hotel-row__search-btn').on('click', function () {
+		if($(this).hasClass('active')) {
+			$('.hotel-popup-serach .rates').fadeOut();
+			$(this).removeClass('active');
+		} else {
+			$('.hotel-popup-serach .rates').fadeIn();
+			$('.hotel-row__search-btn').removeClass('active');
+			$(this).addClass('active');
+		};
+		var searchTop = $(this).offset().top + 28,
+		searchLeft = $(this).offset().left - 46;
+		if(searchLeft > 300) {
+			$('.hotel-popup-serach .rates').addClass('rates-right')
+		} else {
+			$('.rates-right').removeClass('rates-right')
+		}
+		$('.hotel-popup-serach .rates').css({'top' : searchTop, 'left' : searchLeft});
+		return false;
+	});
+	
+	$('.rates-button-close').on('click', function () {
+		$('.hotel-popup-serach .rates').fadeOut();
+		$('.hotel-row__search-btn').removeClass('active');
+		return false;
+	});
+
+	$('.all-check').on('click', function () {
+		$('.hotel-row__checkbox').parent().find('.cb-icon-check-empty:visible').click();
+		return false;
+	});
+	$('.closel-check').on('click', function () {
+		$('.hotel-row__checkbox').parent().find('.cb-icon-check:visible').click();
+		return false;
+	});
+
 	
 
 });
@@ -1782,6 +1810,9 @@ $(window).load(function() {
 	$('.catalog-item').each(function(){
 		$(this).parent('.catalog-item-box').height($(this).height() + 40);
 	});
+
+	if($(window).width() < 768) {$('.gallery-hide').hide()}
+	
 });
 
 $(window).resize(function() {
@@ -2538,6 +2569,14 @@ $(document).mouseup(function (e){
 		$('.catalog-item').find('.tabs-lnk').removeClass('active');
 		$('.catalog-item').find('.tabs-lnk li').removeClass('active');
   	};
+
+  	var container12 = $(".hotel-popup-serach .rates, .hotel-row__search .hotel-row__search-btn"); 
+  		if (!container12.is(e.target) && container12.has(e.target).length === 0){
+  		$('.rates').fadeOut();
+		$('.hotel-row__search-btn').removeClass('active');
+  	};
+
+  	
 
 
 

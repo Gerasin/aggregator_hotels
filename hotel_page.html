@@ -16,6 +16,18 @@
 <script src="js/jquery.ui.touch-punch.js" type="text/javascript"></script>
 <script src="js/fotorama.js" type="text/javascript"></script>
 
+<!-- Add mousewheel plugin (this is optional) -->
+<script src="js/source/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="js/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script src="js/source/jquery.fancybox.pack.js?v=2.1.5" type="text/javascript"></script>
+<link href="js/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" rel="stylesheet" />
+<script src="js/source/helpers/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
+<script src="js/source/helpers/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
+
+<link href="js/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" rel="stylesheet" media="screen" />
+<script src="js/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
+
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(window).load(function(){
@@ -1201,21 +1213,21 @@
 		<div class="row-fluid">
 			<div class="span5">
 				<div class="hotel-info">
-					<h2>Hotel Branicki Ludwika Zamenhofa 4*</h2>
+					<h2><a href="">Hotel Branicki Ludwika Zamenhofa</a> 4*</h2>
 					<div class="hot-bal">
 						<img src="img/hot-bal-ico.png" alt="" class="hot-bal-ico">
 						<p><span>81</span> / 100</p>
 						<a href="">509 reviews</a>
 					</div>
-					<div class="hot-from">
+					<div class="hot-from mob-hide">
 						From <span>$89</span>
 					</div>
-					<div class="hot-night">
+					<div class="hot-night mob-hide">
 						For 16 nights: $3145
 					</div>
-					<div class="pay-button"><a href="" class="button-stl">Book now</a></div>
-					<div class="clearfix"></div>
-					<div class="cat-cont-rayt">
+					<div class="pay-button mob-hide"><a href="" class="button-stl">Book now</a></div>
+					<div class="clearfix mob-hide"></div>
+					<div class="cat-cont-rayt cat-cont-rayt-mob">
 						<span>
 							<img src="img/ico-vk.png" class="ico-vk" alt=""> <i>8.4</i> / 483 <em>reviews</em>
 						</span>
@@ -1223,7 +1235,7 @@
 							<img src="img/ico-rev.png" alt=""> <img src="img/rayting.png" alt=""> <i>4.7</i> / 603 <em>reviews</em>
 						</span>
 					</div>
-					<div class="hot-service">
+					<div class="hot-service mob-hide">
 						<div class="hot-serv-box">
 							<span>Service</span>
 							<div class="hot-serv-ln"><em style="width: 80%"></em></div>
@@ -1240,7 +1252,7 @@
 							<i>6.2</i>
 						</div>
 					</div>
-					<div class="hot-km">
+					<div class="hot-km mob-hide">
 						<div class="hot-km-lnk"><button class="btn-lnk">Map</button></div>
 						<div class="table-pay">
 							<div class="pay-item">
@@ -1258,9 +1270,10 @@
 						</div>
 					</div>
 					<div class="clearfix"></div>
+					<div class="hotel-img-mob"><img src="img/img-1.jpg" alt=""></div>
 					<div class="top_options">
-						<h3>Top options</h3>
-						<ul>
+						<h3 class="mobile-header">Top options</h3>
+						<ul class="mobile-body">
 							<li><img src="img/ico-facilities.png" alt=""> Meeting/Banquet facilities <span>$75</span></li>
 							<li><img src="img/ico-sauna.png" alt=""> Sauna <span>$10</span></li>
 							<li><img src="img/ico-wi-fi.png" alt=""> Free Wi-Fi</li>
@@ -1269,871 +1282,876 @@
 						</ul>
 					</div>
 					<div class="reviews">
-						<div class="pay-button"><a href="" class="button-stl">Add Review</a></div>
-						<h3>Recent Reviews</h3>
-						<div class="show_reviews">
-							Show Reviews: 
-							<div class="sort_form">
-								<div class="sort_form__head">Only Good and Excellent</div>
-								<ul class="sort_form__list">
-									<li><a href="" class="active"><em>Only Good and Excellent</em></a></li>
-									<li><a href=""><em>Only Good</em></a></li>
-									<li><a href=""><em>Only Excellent</em></a></li>
-								</ul>
+						<div class="pay-button mob-hide"><a href="" class="button-stl">Add Review</a></div>
+						<h3 class="mobile-header">Recent Reviews</h3>
+						<div class="mobile-body">
+							<div class="show_reviews">
+								Show Reviews: 
+								<div class="sort_form">
+									<div class="sort_form__head">Only Good and Excellent</div>
+									<ul class="sort_form__list">
+										<li><a href="" class="active"><em>Only Good and Excellent</em></a></li>
+										<li><a href=""><em>Only Good</em></a></li>
+										<li><a href=""><em>Only Excellent</em></a></li>
+									</ul>
+								</div>
 							</div>
+							<ul class="reviews-tab">
+								<li class="active"><button rel="#tab-1">View all</button></li>
+								<li><img src="img/ico-rev.png" alt=""><button rel="#tab-2">Tranio</button></li>
+								<li><img src="img/ico-s.png" alt=""><button rel="#tab-3">Booking</button></li>
+								<li><img src="img/ico-sear.png" alt=""><button rel="#tab-4">Search Hotels</button></li>
+							</ul>
+							<div class="reviews-items">
+								<div id="tab-1" class="reviews-item">
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 1
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>2.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.5</span> Very Good 2
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 3
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>5.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 4
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 5
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 6
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>2.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 7
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 8
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>5.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 9
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 10
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 11
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="listing-page"></div>
+								</div>
+								<div id="tab-2" class="reviews-item">
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 1
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>2.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.5</span> Very Good 2
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 3
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="listing-page"></div> 
+								</div>
+								<div id="tab-3" class="reviews-item">
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 1
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>2.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.5</span> Very Good 2
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 3
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>5.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 4
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 5
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 6
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>2.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 7
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 8
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>5.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 9
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 10
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="review-paging">
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>1.0</span> Very Good
+											</div>
+											<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>4.0</span> Very Good
+											</div>
+											<div class="reviews-header">Еxceptional</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>Bottle of water in room costs 8 eur :(</p>
+										</div>
+										<div class="reviews-box">
+											<div class="reviews-bal">
+												<img src="img/ico-r.png" alt="">
+												<img src="img/rayting.png" alt="">
+												<span>3.5</span> Very Good 11
+											</div>
+											<div class="reviews-header">First trip to Warsaw</div>
+											<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+											<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+										</div>
+									</div>
+									<div class="listing-page"></div>
+								</div>
+								<div id="tab-4" class="reviews-item">
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>4.0</span> Very Good
+										</div>
+										<div class="reviews-header">Еxceptional</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>Bottle of water in room costs 8 eur :(</p>
+									</div>
+									<div class="reviews-box">
+										<div class="reviews-bal">
+											<img src="img/ico-r.png" alt="">
+											<img src="img/rayting.png" alt="">
+											<span>3.5</span> Very Good
+										</div>
+										<div class="reviews-header">First trip to Warsaw</div>
+										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
+										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
+									</div>
+									<div class="listing-page"></div>
+								</div>
+							</div>
+							<a href="" class="next-review-mob">Next Review</a>
+							<div class="pay-button pc-hide"><a href="" class="button-stl">Add Review</a></div>
+							<div class="clearfix"></div>
 						</div>
-						<ul class="reviews-tab">
-							<li class="active"><button rel="#tab-1">View all</button></li>
-							<li><img src="img/ico-rev.png" alt=""><button rel="#tab-2">Tranio</button></li>
-							<li><img src="img/ico-s.png" alt=""><button rel="#tab-3">Booking</button></li>
-							<li><img src="img/ico-sear.png" alt=""><button rel="#tab-4">Search Hotels</button></li>
-						</ul>
-						<div class="reviews-items">
-							<div id="tab-1" class="reviews-item">
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 1
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>2.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.5</span> Very Good 2
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 3
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>5.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 4
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 5
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 6
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>2.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 7
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 8
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>5.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 9
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 10
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 11
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="listing-page"></div>
-							</div>
-							<div id="tab-2" class="reviews-item">
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 1
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>2.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.5</span> Very Good 2
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 3
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="listing-page"></div> 
-							</div>
-							<div id="tab-3" class="reviews-item">
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 1
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>2.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.5</span> Very Good 2
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 3
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>5.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 4
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 5
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 6
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>2.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 7
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 8
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>5.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 9
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 10
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="review-paging">
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>1.0</span> Very Good
-										</div>
-										<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>4.0</span> Very Good
-										</div>
-										<div class="reviews-header">Еxceptional</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>Bottle of water in room costs 8 eur :(</p>
-									</div>
-									<div class="reviews-box">
-										<div class="reviews-bal">
-											<img src="img/ico-r.png" alt="">
-											<img src="img/rayting.png" alt="">
-											<span>3.5</span> Very Good 11
-										</div>
-										<div class="reviews-header">First trip to Warsaw</div>
-										<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-										<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-									</div>
-								</div>
-								<div class="listing-page"></div>
-							</div>
-							<div id="tab-4" class="reviews-item">
-								<div class="reviews-box">
-									<div class="reviews-bal">
-										<img src="img/ico-r.png" alt="">
-										<img src="img/rayting.png" alt="">
-										<span>4.0</span> Very Good
-									</div>
-									<div class="reviews-header">Fun stay - excellent location on the strip!</div>
-									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-									<p>We've stayed at many hotels in Vegas, but for me the TI is the best for it's location. It's next door to the Fashion Show Mall, across the street from The Venetian and the Palazzo, next door to The Mirage, a short walk to Caesars, and close to Wynn and Encore. For Vegas I would say the rooms were good. I liked the bed, the bathroom was average. The staff was nice and friendly. </p>
-								</div>
-								<div class="reviews-box">
-									<div class="reviews-bal">
-										<img src="img/ico-r.png" alt="">
-										<img src="img/rayting.png" alt="">
-										<span>4.0</span> Very Good
-									</div>
-									<div class="reviews-header">Еxceptional</div>
-									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-									<p>Bottle of water in room costs 8 eur :(</p>
-								</div>
-								<div class="reviews-box">
-									<div class="reviews-bal">
-										<img src="img/ico-r.png" alt="">
-										<img src="img/rayting.png" alt="">
-										<span>3.5</span> Very Good
-									</div>
-									<div class="reviews-header">First trip to Warsaw</div>
-									<div class="reviews-date">hoovetravelerDallas, TexasNov 2, 2015</div>
-									<p>The hotel has a great location, nice staff, reasonable prices, but there was extremely noisy, very very loud all day and night. Unfortunately, for me it was impossible to sleep, even with the windows closed</p>
-								</div>
-								<div class="listing-page"></div>
-							</div>
-						</div>
-						<div class="h2">Amenities</div>
-						<ul class="amenities">
+						<div class="h2 mobile-header active">Amenities</div>
+						<ul class="amenities mobile-body">
 							<li>Air conditioning public areas</li>
 							<li>Pets not allowed</li>
 							<li>Conference Facilities</li>
@@ -2153,28 +2171,32 @@
 
 			</div>
 			<div class="span7">
-				<div class="hotel-gallery">
-					<div class="gallery_btn--prev"></div>
-					<div class="gallery_btn--next"></div>
-					<div class="hotel-gal-top fotorama" data-nav="thumbs" data-keyboard="true" data-width="100%">
-						<img src="img/img-1.jpg" alt="">
-						<img src="img/img-7.jpg" alt="">
-						<img src="img/img-3.jpg" alt="">
-						<img src="img/img-4.jpg" alt="">
-						<img src="img/img-5.jpg" alt="">
-						<img src="img/img-6.jpg" alt="">
-						<img src="img/img-1.jpg" alt="">
-						<img src="img/img-2.jpg" alt="">
-						<img src="img/img-3.jpg" alt="">
-						<img src="img/img-4.jpg" alt="">
-						<img src="img/img-5.jpg" alt="">
+				<h3 class="mobile-header pc-hide active">Photogallery</h3>
+				<div class="mobile-body gallery-hide">
+					<div class="hotel-gallery">
+						<div class="gallery_btn--prev"></div>
+						<div class="gallery_btn--next"></div>
+						<div class="hotel-gal-top fotorama" data-nav="thumbs" data-keyboard="true" data-width="100%">
+							<img src="img/img-1.jpg" alt="">
+							<img src="img/img-7.jpg" alt="">
+							<img src="img/img-3.jpg" alt="">
+							<img src="img/img-4.jpg" alt="">
+							<img src="img/img-5.jpg" alt="">
+							<img src="img/img-6.jpg" alt="">
+							<img src="img/img-1.jpg" alt="">
+							<img src="img/img-2.jpg" alt="">
+							<img src="img/img-3.jpg" alt="">
+							<img src="img/img-4.jpg" alt="">
+							<img src="img/img-5.jpg" alt="">
+						</div>
 					</div>
 				</div>
 				<div class="rates_new-cont">
 					<div class="rates">
-						<div class="h2">Room rates</div>
-						<div class="h2 h2-option">Search options</div>
-						<div class="rates_new-search">
+						<div class="h2 mobile-header">Room rates</div>
+						<div class="mobile-body">
+							<div class="h2 h2-option">Search options</div>
+							<div class="rates_new-search">
 							<select name="" class="select">
 								<option value="1">1 room</option>
 								<option value="2">2 room</option>
@@ -2182,9 +2204,9 @@
 								<option value="4">4 room</option>
 								<option value="5">5 room</option>
 							</select>
-						</div>
-						<div class="clearfix"></div>
-						<div class="rates-search">
+							</div>
+							<div class="clearfix"></div>
+							<div class="rates-search">
 							<div class="rates-h3"><span class="Check-out ch-in">Choose check-in date</span><span class="ch-out">Choose check-out date</span></div>
 							<div id="datepicker"></div>
 							<div id="dateText"></div>
@@ -2247,6 +2269,7 @@
 								<button class="button-stl button-show">Search for room rates</button> 
 								<a href="" class="pay-button-close">Cancel</a>
 							</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -2272,14 +2295,6 @@
 					<div class="hotel-pager">
 						<div class="hotel-pager-i">
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2290,19 +2305,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2313,19 +2328,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2336,19 +2351,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2359,19 +2374,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2382,19 +2397,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2407,144 +2422,12 @@
 										</ul>
 									</div>
 								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="hotel-pager-i">
-							<div class="hotel-item">
 								<div class="hotel-detals">
 									<a href="" class="button-stl">Book now</a>
 									<div class="hotel-reset"><button></button></div>
 									<div class="hotel-money">
 										<p><strong>$74</strong> nightly</p>
 										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
 									</div>
 								</div>
 								<div class="clearfix"></div>
@@ -2552,14 +2435,6 @@
 						</div>
 						<div class="hotel-pager-i">
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2570,19 +2445,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2593,19 +2468,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2616,19 +2491,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2639,19 +2514,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2662,19 +2537,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2687,159 +2562,19 @@
 										</ul>
 									</div>
 								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="hotel-pager-i">
-							<div class="hotel-item">
 								<div class="hotel-detals">
 									<a href="" class="button-stl">Book now</a>
 									<div class="hotel-reset"><button></button></div>
 									<div class="hotel-money">
 										<p><strong>$74</strong> nightly</p>
 										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
-								<div class="hotel-cont">
-									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
-									<p>Standard King or Twin Room - Non-refundable</p>
-									<div class="hotel-serv">
-										<ul class="hotel-serv-in">
-											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
-											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
-											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
-											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
-										</ul>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 						</div>
 						<div class="hotel-pager-i">
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2850,19 +2585,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2873,19 +2608,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2896,19 +2631,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2919,19 +2654,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2942,19 +2677,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2965,21 +2700,21 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 						</div>
 						<div class="hotel-pager-i">
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -2990,19 +2725,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -3013,19 +2748,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -3036,19 +2771,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -3059,19 +2794,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -3082,19 +2817,19 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="hotel-item">
-								<div class="hotel-detals">
-									<a href="" class="button-stl">Book now</a>
-									<div class="hotel-reset"><button></button></div>
-									<div class="hotel-money">
-										<p><strong>$74</strong> nightly</p>
-										<p><strong>$563</strong> total</p>
-									</div>
-								</div>
+							<div class="hotel-item"> 
 								<div class="hotel-cont">
 									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
 									<p>Standard King or Twin Room - Non-refundable</p>
@@ -3105,6 +2840,294 @@
 											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
 											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
 										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="hotel-pager-i">
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="hotel-pager-i">
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="hotel-item"> 
+								<div class="hotel-cont">
+									<div class="hotel-logo"><img src="img/hotel-logo1.jpg" alt=""></div>
+									<p>Standard King or Twin Room - Non-refundable</p>
+									<div class="hotel-serv">
+										<ul class="hotel-serv-in">
+											<li><img src="img/ico-size.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> 68 m<sup>2</sup></li>
+											<li><img src="img/ico-br.png" class="tooltip-m" rel="tooltip" title="first tooltip" alt=""> $10</li>
+											<li><img src="img/ico-wifi.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $3</li>
+											<li><img src="img/ico-park.png" class="tooltip-m" rel="tooltip" title="Password at the reception" alt=""> $15</li>
+										</ul>
+									</div>
+								</div>
+								<div class="hotel-detals">
+									<a href="" class="button-stl">Book now</a>
+									<div class="hotel-reset"><button></button></div>
+									<div class="hotel-money">
+										<p><strong>$74</strong> nightly</p>
+										<p><strong>$563</strong> total</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
@@ -3117,8 +3140,8 @@
 					</div>
 				</div>
 				<div class="good_know">
-					<div class="h2">Good to know</div>
-					<div class="page-text">
+					<div class="h2 mobile-header active">Good to know</div>
+					<div class="page-text mobile-body">
 						<p>Kempinski Hotel Cathedral Square is located in the Old Town, at the Cathedral Square, in front of the Gediminas Tower. It offers elegant, air-conditioned rooms with free Wi-Fi and access to the spa centre. <br><br>
 
 						Each room at the Kempinski includes satellite TV and a view of the city. Pastel-coloured interiors include heavy, wooden furniture and subtle lighting. There is also a marble bathroom. <br> <br>
@@ -3127,14 +3150,16 @@
 						</p>
 					</div>
 				</div>
-				<div class="h2">About</div>
-				<div class="page-text page-hide">
-					<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at the Arborea restaurant. Our a la carte menu offers modern European and Belarusian cuisine using the freshest seasonal products. Renaissance Minsk Hotel offers 6 multifunctional meeting rooms, business center and unique Grand Ballroom for up to 640 people, which will assure the success of your meeting. After a long day of meetings or sightseeing, rejuvenate in our SPA </p>
-					<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at</p>
-				</div>
-				<div class="page-text-open">
-					<button class="read-open" type="button">Read more</button>
-					<button class="read-hide" type="button">Read hide</button>
+				<div class="h2 mobile-header active">About</div>
+				<div class="mobile-body">
+					<div class="page-text page-hide">
+						<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at the Arborea restaurant. Our a la carte menu offers modern European and Belarusian cuisine using the freshest seasonal products. Renaissance Minsk Hotel offers 6 multifunctional meeting rooms, business center and unique Grand Ballroom for up to 640 people, which will assure the success of your meeting. After a long day of meetings or sightseeing, rejuvenate in our SPA </p>
+						<p>Discover Minsk while enjoying the luxuries of brand-new Renaissance Minsk Hotel offering 267 guest rooms, including 30 elegant suites. All guest rooms of our luxury hotel in Minsk offer plush bedding and superb Minsk city views. Business travelers enjoy our laptop-fitting safes and Wi-Fi connectivity. Club level rooms and suites offer Club lounge access where the guests can enjoy complimentary continental breakfast and all-day refreshments. Experience true dining in our Renaissance Minsk Hotel restaurant - enjoy delicious culinary creations at</p>
+					</div>
+					<div class="page-text-open">
+						<button class="read-open" type="button">Read more</button>
+						<button class="read-hide" type="button">Read hide</button>
+					</div>
 				</div>
 			</div>
 		</div>
