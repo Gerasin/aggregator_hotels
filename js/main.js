@@ -1801,7 +1801,21 @@ $(document).ready(function(){
 		return false;
 	});
 
-	
+	$('.button-stl.button-stl-filter').on('click', function () {
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$('.filter-popup').fadeOut();
+		} else {
+			$(this).addClass('active');
+			$('.filter-popup').fadeIn();
+		};
+		return false;
+	});
+	$('.filter-close-filters').on('click', function () {
+		$(this).removeClass('active');
+		$('.filter-popup').fadeOut();
+		return false;
+	});
 
 });
 
